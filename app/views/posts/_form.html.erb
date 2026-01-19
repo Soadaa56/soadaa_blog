@@ -17,13 +17,18 @@
   </div>
 
   <div>
+    <%= form.label :category, style: "display: block" %>
+    <%= form.select :category, Post.categories.keys.map { |k| [k.humanize, k] } %>
+  </div>
+
+  <div>
     <%= form.label :body, style: "display: block" %>
     <%= form.textarea :body %>
   </div>
 
   <div>
-    <%= form.label :category, style: "display: block" %>
-    <%= form.number_field :category %>
+    <%= form.label :draft, "Save as draft?" %>
+    <%= form.check_box :draft %>
   </div>
 
   <div>

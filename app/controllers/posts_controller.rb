@@ -3,7 +3,12 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = 
+      if params[:category].present?
+        Post.where(category: params[:category]).published.order(created_at: :desc)
+      else
+        Post.published.order(created_at: :desc)
+      end
   end
 
   # GET /posts/1 or /posts/1.json
@@ -23,6 +28,12 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+    if params[:post][:draft] == "1"
+      @post.published_at = nil
+    else
+      @post.published_at = Time.current
+    end
+
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: "Post was successfully created." }
@@ -36,6 +47,13 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
+
+    if params[:post][:draft] == "1"
+      @post.published_at = nil
+    else
+      @post.published_at = Time.current
+    end
+
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: "Post was successfully updated.", status: :see_other }

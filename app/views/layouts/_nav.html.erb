@@ -3,13 +3,15 @@
         <p>Soadaa's Blog</p>
     </div>
     <ul>
-        <li><%= link_to "home", root_path %></li>
-        <li>Reviews</li>
-        <li>Rankings</li>
-        <li>Blog</li>
-        <li>Guides</li>
-        <li>About Me</li>
-        <li>Contact Me</li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Reviews", posts_path(category: "review") %></li>
+        <li><%= link_to "Rankings", posts_path(category: "ranking") %></li>
+        <li><%= link_to "Impression", posts_path(category: "impression") %></li>
+        <li><%= link_to "Blog", posts_path(category: "blog") %></li>
+        <li><%= link_to "Guides", posts_path(category: "guide") %></li>
+        <li><%= link_to "All Posts", posts_path %></li>
+        <li><%= link_to "About Me", about_path %></li>
+        <li><%= link_to "Contact Me", contact_path %></li>
     </ul>
-    <div>(placeholder search)</div>
+    <%= render "layouts/search" %>
 </nav>
