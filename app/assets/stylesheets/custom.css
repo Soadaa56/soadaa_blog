@@ -1,0 +1,38 @@
+html {
+    background-color: burlywood;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#nav-menu .nav-list{
+    list-style-type: none;
+    background-color: orange;
+
+    overflow: hidden;
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        max-height 0.3s ease,
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+#nav-menu .nav-list-icon {
+    max-width: 32px;
+}
+
+#nav-menu .nav-list.hidden {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-5px);
+}
+
+.hidden {
+    display: none;
+}
+
+.home-logo {
+    background-color: red;
+}

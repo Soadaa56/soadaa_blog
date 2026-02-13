@@ -22,6 +22,11 @@
   </div>
 
   <div>
+    <%= form.label :cover_image %>
+    <%= form.file_field :cover_image %>
+  </div>
+
+  <div>
     <%= form.label :body, style: "display: block" %>
     <%= form.textarea :body %>
   </div>
