@@ -1,6 +1,8 @@
 class Post < ApplicationRecord
-    enum :category, { review: 0, impression: 1, ranking: 2, guide: 3, blog: 4 }
+    enum :category, { blog: 0, review: 1, impression: 2, ranking: 3, guide: 4 }
     scope :published, -> { where("published_at <= ?", Time.current) }
     has_one_attached :cover_image
     has_many_attached :images
+    validates :title, presence: true
+    validates :body, presence: true
 end

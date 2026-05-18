@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_13_193920) do
+ActiveRecord::Schema[8.1].define(version: 2026_05_18_214400) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
@@ -41,7 +41,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_13_193920) do
 
   create_table "posts", force: :cascade do |t|
     t.text "body"
-    t.integer "category", default: 2, null: false
+    t.integer "category", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "published_at"
     t.string "title"
