@@ -1,38 +1,35 @@
+/* Mobile Default */
 html {
-    background-color: burlywood;
-    padding-left: 1em;
-    padding-right: 1em;
+        background-color: #123;
+        padding: 1em;
+    }
+
+#nav-menu {
+    .nav-list {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        padding-inline-start: 0;
+    }
+
+    .nav-list li:not(:last-child)::after {
+        content: "|";
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
 }
 
-#nav-menu .nav-list{
-    list-style-type: none;
-    background-color: orange;
-
-    overflow: hidden;
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-
-    transition:
-        max-height 0.3s ease,
-        opacity 0.2s ease,
-        transform 0.2s ease;
+/* Tablet */
+@media screen and (min-width: 768px) {  
+    
 }
 
-#nav-menu .nav-list-icon {
-    max-width: 32px;
+/* Desktop */
+@media screen and (min-width: 1024px) {  
+    
 }
 
-#nav-menu .nav-list.hidden {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-5px);
-}
-
+/* Custom CSS classes */
 .hidden {
     display: none;
-}
-
-.home-logo {
-    background-color: red;
 }

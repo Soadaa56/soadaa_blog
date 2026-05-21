@@ -1,0 +1,44 @@
+
+<!-- Hamburger Menu
+<nav id="nav-menu">
+    <div data-controller="menu">
+        <div data-action="click->menu#toggle">
+            <%= image_tag("svg/hamburger-menu.svg", class: "nav-list-icon", alt: "hamburger menu icon to expand menu options") %>
+        </div>
+        <ul class="nav-list" data-menu-target="list">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Reviews", posts_path(category: "review") %></li>
+            <li><%= link_to "Rankings", posts_path(category: "ranking") %></li>
+            <li><%= link_to "Impression", posts_path(category: "impression") %></li>
+            <li><%= link_to "Guides", posts_path(category: "guide") %></li>
+            <li><%= link_to "All Posts", posts_path %></li>
+            <li><%= link_to "About Me", about_path %></li>
+            <li><%= link_to "Contact Me", contact_path %></li>
+        </ul>
+    </div>
+</nav>
+
+#nav-menu {
+    .nav-list {
+        list-style-type: none;
+        background-color: grey;
+
+        overflow: hidden;
+        opacity: 1;
+        transform: translateY(0);
+    
+        transition:
+            max-height 0.3s ease,
+            opacity 0.2s ease,
+            transform 0.2s ease;
+    }
+    .nav-list-icon {
+        max-width: 32px;
+    }
+    .nav-list.hidden {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-5px);
+    }
+}
+-->
