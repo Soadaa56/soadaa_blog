@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+  http_basic_authenticate_with(
+    name:     ENV.fetch("BLOG_ADMIN_USER", "admin"),
+    password: ENV.fetch("BLOG_ADMIN_PASS", "password"),
+    only:     %i[new create edit update destroy]
+  )
   before_action :set_post, only: %i[ show edit update destroy ]
 
   # GET /posts or /posts.json
@@ -48,12 +53,10 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params.expect(:id))
     end
 
-    # Only allow a list of trusted parameters through.
     def post_params
       params.expect(post: [ :title, :body, :category ])
     end
