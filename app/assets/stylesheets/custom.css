@@ -1,12 +1,16 @@
 /* Mobile Default */
 html {
-        background-color: #123;
-        padding: 1em;
-    }
+    font-family: monospace, Consolas, Monaco, 'Courier New', monospace;
+    background-color: #123;
+    padding: 1em;
+}
 
 #nav-menu {
+    outline: 1px solid red;
+    max-width: 350px;
     .nav-list {
         display: flex;
+        flex-flow: column-wrap;
         list-style-type: none;
         justify-content: center;
         padding-inline-start: 0;
