@@ -1,23 +1,51 @@
 /* Mobile Default */
+:root {
+    --primary-color: black;
+    --secondary-color: red;
+    --text-color: #faf5f6e3;
+    --background-color: #123;
+}
+
 html {
     font-family: monospace, Consolas, Monaco, 'Courier New', monospace;
-    background-color: #123;
-    padding: 1em;
+    background-color: var(--background-color);
+    padding: 1.5rem;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    filter: brightness(110%);
+}
+
+h1, h2, h3, h4, h5, h6  {
+    color: var(--secondary-color);
+}
+
+p {
+    color: var(--text-color)
 }
 
 #nav-menu {
-    outline: 1px solid red;
-    max-width: 350px;
+    max-width: 600px;
     .nav-list {
         display: flex;
-        flex-flow: column-wrap;
+        flex-wrap: wrap;
         list-style-type: none;
         justify-content: center;
         padding-inline-start: 0;
+        overflow: visible;
+        li {
+            min-width: 0;
+            margin: 0.4rem;
+        }
     }
 
     .nav-list li:not(:last-child)::after {
-        content: "|";
+        /* content: "|"; */
         margin-left: 0.25rem;
         margin-right: 0.25rem;
     }
