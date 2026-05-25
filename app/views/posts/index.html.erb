@@ -2,14 +2,16 @@
 
 <% content_for :title, "Posts" %>
 
-<h1>Posts</h1>
 <%= link_to "New post", new_post_path %>
+<h1>Posts</h1>
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <%= render post %>
     <p>
-      <%= link_to "Show this post", post %>
+      <%= post.created_at.strftime("%B %d, %Y") %> 
+      -
+      <%= link_to post.title, post %>
     </p>
   <% end %>
 </div>
+
