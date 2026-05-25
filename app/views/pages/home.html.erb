@@ -1,24 +1,22 @@
 <main>
-    <h1>Soadaa's Blog</h1>
+    <h1 class="home-header">Soadaa's Blog</h1>
     <p>Doloribus, quis quo. Repellendus culpa minus quaerat ut vel quas asperiores obcaecati dolorem perferendis labore quod dolorum iusto aliquam minima earum, tempore natus illo qui expedita omnis totam ab? 
         Quibusdam totam doloremque ad id aut, iste dicta accusamus corrupti mollitia autem necessitatibus suscipit aliquid consequuntur veniam numquam adipisci sint laborum magnam dolore architecto maiores.</p>
     <p>Quidem, ipsum maiores! Laborum eos accusantium nemo, soluta obcaecati modi temporibus commodi saepe at labore, fuga aspernatur quisquam sequi dicta. Laborum dolore rem doloribus deleniti, et error. Accusamus dolores porro cum.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, possimus?</p>
 
-    <h1>Latest Post</h1>
-    <article>
-        <h3><%= @post.title %></h3>
+    <article class="home-post">
+        <h1 class="home-latest-post-header">Latest Post</h1>
+        <h3 class="underline"><%= @post.title %></h3>
         <div class="capitalize">
             <% if @post.created_at == @post.updated_at %>
                 <%= @post.category %> - <%= @post.created_at.to_fs(:long) %>
             <% else %>
-                <%= @post.category %> - <%= @post.created_at.to_fs(:long)%> (Last updated at: <%= @post.updated_at.to_fs(:long) %>) %>
+                <div><%= @post.category %> - <%= @post.created_at.to_fs(:long)%></div>
+                <div>Last updated: <%= @post.updated_at.to_fs(:long) %></div>
             <% end %>
         </div>
-        <p>
-            <%= @post.body %>
-        </p>
+
+        <p class="post-body"><%= @post.body %></p>
     </article>
 </main>
-
-<% console %>

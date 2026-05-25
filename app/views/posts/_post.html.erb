@@ -1,19 +1,16 @@
-<div class="post" id="<%= dom_id post %>">
+<div id="<%= dom_id post %>">
   <div>
-    <h1 class="capitalize">
+    <h1 class="capitalize underline">
       <%= post.title %>
     </h1>
   </div>
-  
-  <div>
-    <h3><%= post.category.capitalize %></h3>
-  </div>
 
-  <div class="capitalize">
+  <div class="capitalize small-text">
     <% if post.created_at == post.updated_at %>
-      <%= @post.created_at.to_fs(:long) %>
+      <%= @post.category %> - <%= @post.created_at.to_fs(:long) %>
     <% else %>
-      <%= @post.created_at.to_fs(:long)%> (Last updated at: <%= @post.updated_at.to_fs(:long) %>)
+      <div><%= @post.category %> - <%= @post.created_at.to_fs(:long)%></div>
+      <div>Last updated: <%= @post.updated_at.to_fs(:long) %></div>
     <% end %>
   </div>
 

@@ -3,6 +3,7 @@
 :root {
     --primary-color: black;
     --secondary-color: red;
+    --tertiary-color: lightblue;
     --text-color: #faf5f6e3;
     --background-color: #123;
 }
@@ -14,12 +15,10 @@ html {
     padding: 1.5rem;
 }
 
-hr {
-    color: black;
-}
 
-a:visited {
-    color: blue;
+
+a, a:visited {
+    color: var(--tertiary-color);
 }
 
 a:hover {
@@ -53,10 +52,19 @@ p, div {
 }
 
 /* Class selectors */
-.post {
-    div {
-        margin: 0.5rem;
+.home-header {
+    margin-bottom: 2rem;
+}
+.home-post {
+    margin-top: 5rem;
+
+    .home-latest-post-header {
+        margin-bottom: 2.5rem;
     }
+}
+.post-body {
+    margin-top: 2rem;
+    padding: 0.4rem;
 }
 
 .post-show-back {
@@ -78,8 +86,20 @@ p, div {
     text-transform: capitalize;
 }
 
+.lowercase {
+    text-transform: lowercase;
+}
+
 .uppercase {
     text-transform: uppercase;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.small-text {
+    font-size: 0.75rem;
 }
 
 .hidden {
