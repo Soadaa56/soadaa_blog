@@ -1,9 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Posts" %>
+<% content_for :title, "Soadaa's Blog - Posts" %>
 
 <%= link_to "New post", new_post_path %>
-<h1>Posts</h1>
+
+<h1 class="capitalize">
+  <%= @category.pluralize %>
+</h1>
 
 <div id="posts">
   <% @posts.each do |post| %>

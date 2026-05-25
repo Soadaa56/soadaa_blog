@@ -74,6 +74,14 @@ p, div {
 }
 
 /* Custom CSS classes */
+.capitalize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
 .hidden {
     display: none;
 }

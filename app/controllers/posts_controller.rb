@@ -7,12 +7,13 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
 
   # GET /posts or /posts.json
-  def index
-    @posts = 
+  def index 
       if params[:category].present?
-        Post.where(category: params[:category]).published.order(created_at: :desc)
+       @posts = Post.where(category: params[:category]).published.order(created_at: :desc)
+       @category = params[:category]
       else
-        Post.published.order(created_at: :desc)
+       @posts = Post.published.order(created_at: :desc)
+       @category = "All Posts"
       end
   end
 
