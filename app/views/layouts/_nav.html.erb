@@ -1,6 +1,7 @@
 <nav id="nav-menu">
     <ul class="nav-list">
         <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Blogs", posts_path(category: "blog") %></li>
         <li><%= link_to "Reviews", posts_path(category: "review") %></li>
         <li><%= link_to "Rankings", posts_path(category: "ranking") %></li>
         <li><%= link_to "Impression", posts_path(category: "impression") %></li>
