@@ -22,13 +22,18 @@
   </div>
 
   <div>
-    <%= form.label :cover_image %>
-    <%= form.file_field :cover_image %>
+    <%= form.label :published_at, "Publish at", style: "display: block" %>
+    <%= form.datetime_local_field :published_at %>
   </div>
 
   <div>
     <%= form.label :body, style: "display: block" %>
     <%= form.textarea :body, rows: 22 %>
+  </div>
+  
+  <div>
+    <%= form.label :cover_image %>
+    <%= form.file_field :cover_image %>
   </div>
 
   <div>

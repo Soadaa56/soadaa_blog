@@ -1,12 +1,22 @@
-<% content_for :title, "Editing post" %>
+<% content_for :title, "Editing Post" %>
 
 <h1>Post Editing</h1>
 
-<%= render "form", post: @post %>
+<div>
+  <%= render "form", post: @post %>
+</div>
+
+
 
 <br>
 
 <div class="capitalize">
   <%= link_to "show this post", @post %> |
   <%= link_to "back to posts", posts_path %>
+</div>
+
+
+<br><br><br>
+<div>
+  <%= button_to "Delete Post", @post, method: :delete %>
 </div>
