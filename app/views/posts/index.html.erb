@@ -10,7 +10,7 @@
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <p>
+    <p class="capitalize">
       <%= post.created_at.strftime("%B %d, %Y") %> 
       -
       <%= link_to post.title, post %>

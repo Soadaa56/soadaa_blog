@@ -8,11 +8,11 @@
     <h1>Latest Post</h1>
     <article>
         <h3><%= @post.title %></h3>
-        <div>
+        <div class="capitalize">
             <% if @post.created_at == @post.updated_at %>
-                <%= @post.category.capitalize %> - <%= @post.created_at.to_fs(:long) %>
+                <%= @post.category %> - <%= @post.created_at.to_fs(:long) %>
             <% else %>
-                <%= @post.category.capitalize %> - <%= @post.created_at.to_fs(:long)%> (Last updated at: <%= @post.updated_at.to_fs(:long) %>) %>
+                <%= @post.category %> - <%= @post.created_at.to_fs(:long)%> (Last updated at: <%= @post.updated_at.to_fs(:long) %>) %>
             <% end %>
         </div>
         <p>
