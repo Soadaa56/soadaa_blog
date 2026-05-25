@@ -4,6 +4,21 @@
         Quibusdam totam doloremque ad id aut, iste dicta accusamus corrupti mollitia autem necessitatibus suscipit aliquid consequuntur veniam numquam adipisci sint laborum magnam dolore architecto maiores.</p>
     <p>Quidem, ipsum maiores! Laborum eos accusantium nemo, soluta obcaecati modi temporibus commodi saepe at labore, fuga aspernatur quisquam sequi dicta. Laborum dolore rem doloribus deleniti, et error. Accusamus dolores porro cum.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, possimus?</p>
+
+    <h1>Latest Post</h1>
+    <article>
+        <h3><%= @post.title %></h3>
+        <div>
+            <% if @post.created_at == @post.updated_at %>
+                <%= @post.category.capitalize %> - <%= @post.created_at.to_fs(:long) %>
+            <% else %>
+                <%= @post.category.capitalize %> - <%= @post.created_at.to_fs(:long)%> (Last updated at: <%= @post.updated_at.to_fs(:long) %>) %>
+            <% end %>
+        </div>
+        <p>
+            <%= @post.body %>
+        </p>
+    </article>
 </main>
 
 <% console %>
