@@ -9,16 +9,7 @@
         <h1 class="home-latest-post-header">Latest Post</h1>
 
         <div class="capitalize">
-            <% if @post.created_at == @post.updated_at %>
-                <%= @post.category %> - <%= @post.created_at.to_fs(:long) %>
-            <% else %>
-                <div><%= @post.category %> - <%= @post.created_at.to_fs(:long)%></div>
-                <div>Last updated: <%= @post.updated_at.to_fs(:long) %></div>
-            <% end %>
-        </div>
-
-        <div>
-            <h3 class="capitalize"><%= link_to @post.title, @post %></h3>
+            <%= @post.category %> - <%= @post.created_at.to_fs(:long) %> - <%= link_to @post.title, @post %>
         </div>
     </div>
 </main>
