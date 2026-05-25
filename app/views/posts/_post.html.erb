@@ -1,21 +1,20 @@
 <div class="post" id="<%= dom_id post %>">
   <div>
-    <strong>Title:</strong>
-    <%= post.title %>
+    <h1><%= post.title %></h1>
   </div>
   
   <div>
-    <strong>Category:</strong>
     <%= post.category.capitalize %>
   </div>
 
+  <% if post.cover_image.attached? %>
   <div>
     <%= post.cover_image %>
   </div>
+  <% end %>
 
   <div>
     <strong>Body:</strong>
     <%= post.body %>
   </div>
-
 </div>
