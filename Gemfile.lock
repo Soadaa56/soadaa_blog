@@ -390,6 +390,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails (~> 1.4)
   debug
+  dotenv
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
