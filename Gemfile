@@ -68,3 +68,5 @@ end
 gem "cssbundling-rails", "~> 1.4"
 
 # Custom Gems
+
+gem "commonmarker", "~> 2.8"

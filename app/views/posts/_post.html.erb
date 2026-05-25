@@ -1,4 +1,4 @@
-<div id="<%= dom_id post %>">
+<article id="<%= dom_id post %>">
   <div>
     <h1 class="capitalize">
       <%= post.title %>
@@ -7,20 +7,20 @@
 
   <div class="capitalize small-text">
     <% if post.created_at == post.updated_at %>
-      <%= @post.category %> - <%= @post.created_at.to_fs(:long) %>
+      <%= post.category %> - <%= post.created_at.to_fs(:long) %>
     <% else %>
-      <div><%= @post.category %> - <%= @post.created_at.to_fs(:long)%></div>
-      <div>Last updated: <%= @post.updated_at.to_fs(:long) %></div>
+      <div><%= post.category %> - <%= post.created_at.to_fs(:long)%></div>
+      <div>Last updated: <%= post.updated_at.to_fs(:long) %></div>
     <% end %>
   </div>
 
   <% if post.cover_image.attached? %>
   <div>
-    <%= post.cover_image %>
+    <%= image_tag post.cover_image %>
   </div>
   <% end %>
 
-  <article class="post-body">
-    <%= post.body %>
-  </article>
-</div>
+  <div class="post-body">
+    <%= @markdown %>
+  </div>
+</article>

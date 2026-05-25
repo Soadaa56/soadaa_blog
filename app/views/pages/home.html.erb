@@ -5,10 +5,9 @@
     <p>Quidem, ipsum maiores! Laborum eos accusantium nemo, soluta obcaecati modi temporibus commodi saepe at labore, fuga aspernatur quisquam sequi dicta. Laborum dolore rem doloribus deleniti, et error. Accusamus dolores porro cum.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, possimus?</p>
 
-    <article class="home-post">
+    <div class="home-post">
         <h1 class="home-latest-post-header">Latest Post</h1>
-        
-        <p><%= link_to @post.title, posts_path(@post) %></p>
+
         <div class="capitalize">
             <% if @post.created_at == @post.updated_at %>
                 <%= @post.category %> - <%= @post.created_at.to_fs(:long) %>
@@ -18,6 +17,8 @@
             <% end %>
         </div>
 
-        <p class="post-body"><%= @post.body %></p>
-    </article>
+        <div>
+            <h3 class="capitalize"><%= link_to @post.title, @post %></h3>
+        </div>
+    </div>
 </main>
