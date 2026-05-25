@@ -3,13 +3,17 @@
 :root {
     --primary-color: black;
     --secondary-color: red;
-    --tertiary-color: lightblue;
+    --accent-color: lightblue;
     --text-color: #faf5f6e3;
     --background-color: #123;
 }
 
 /* Element type selectors */
 html {
+    font-size: 16px;
+}
+
+body {
     font-family: monospace, Consolas, Monaco, 'Courier New', monospace;
     background-color: var(--background-color);
     padding: 1.5rem;
@@ -18,7 +22,7 @@ html {
 
 
 a, a:visited {
-    color: var(--tertiary-color);
+    color: var(--accent-color);
 }
 
 a:hover {
@@ -56,7 +60,7 @@ p, div {
     margin-bottom: 2rem;
 }
 .home-post {
-    margin-top: 5rem;
+    margin-top: 4rem;
 
     .home-latest-post-header {
         margin-bottom: 2.5rem;
@@ -72,13 +76,30 @@ p, div {
 }
 
 /* Tablet */
-@media screen and (min-width: 768px) {  
-    
+@media screen and (min-width: 768px) {
+    body {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        font-size: 1.125rem /* 18px */;
+    }
+
+    #nav-menu {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 }
 
 /* Desktop */
 @media screen and (min-width: 1024px) {  
-    
+    body {
+        padding-left: 12rem;
+        padding-right: 12rem;
+        font-size: 1.25rem /* 20px */;
+    }
+
+    #nav-menu {
+        max-width: 1000px;
+    }
 }
 
 /* Custom CSS classes */
@@ -99,7 +120,7 @@ p, div {
 }
 
 .small-text {
-    font-size: 0.75rem;
+    font-size: 0.82rem;
 }
 
 .hidden {

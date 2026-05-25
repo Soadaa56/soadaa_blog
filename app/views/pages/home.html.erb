@@ -7,7 +7,8 @@
 
     <article class="home-post">
         <h1 class="home-latest-post-header">Latest Post</h1>
-        <h3 class="underline"><%= @post.title %></h3>
+        
+        <p><%= link_to @post.title, posts_path(@post) %></p>
         <div class="capitalize">
             <% if @post.created_at == @post.updated_at %>
                 <%= @post.category %> - <%= @post.created_at.to_fs(:long) %>
