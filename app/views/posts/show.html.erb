@@ -2,9 +2,13 @@
 
 <% content_for :title, @post.title %>
 
-<article class="post-show">
+<div class="capitalize">
+  <%= link_to "edit post", edit_post_path(@post) %>
+</div>
+
+<div class="post-show">
   <%= render @post %>
-</article>
+</div>
 
 
 <div class="post-show-back capitalize">
