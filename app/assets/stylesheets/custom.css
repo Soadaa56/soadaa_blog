@@ -1,6 +1,7 @@
 /* Mobile Default */
 /* pseudo slectors */
 :root {
+    /* Dark */
     --primary-color: black;
     --secondary-color: tan;
     --accent-color: lightblue;
@@ -8,7 +9,20 @@
     --background-color: #123;
 }
 
+/* Light */
+body.light {
+    --primary-color: white;
+    --secondary-color: purple;
+    --accent-color: tan;
+    --text-color: gray;
+    --background-color: aliceblue;
+}
+
 /* Element type selectors */
+*:focus-visible {
+    outline: 3px solid hotpink;
+}
+
 html {
     font-size: 16px;
 }
@@ -19,8 +33,6 @@ body {
     padding: 1.5rem;
 }
 
-
-
 a, a:visited {
     color: var(--accent-color);
 }
@@ -30,17 +42,28 @@ a:hover {
     filter: brightness(110%);
 }
 
+abbr {
+  font-style: italic;
+  color: chocolate;
+}
+
 h1, h2, h3, h4, h5, h6  {
     color: var(--secondary-color);
 }
 
-p, div {
+p {
     color: var(--text-color)
 }
 
 /* ID selectors */
 #nav-menu {
     max-width: 600px;
+    display: flex;
+
+    & > * {
+        outline: 5px solid mediumaquamarine;
+    }
+
     .nav-list {
         display: flex;
         flex-wrap: wrap;
@@ -51,6 +74,29 @@ p, div {
         li {
             min-width: 0;
             margin: 0.4rem;
+        }
+    }
+
+    .theme-menu {
+        position: relative;
+        margin-left: 2rem;
+
+        .theme-dropdown-menu {
+            position: fixed;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+
+            display: flex;
+            flex-direction: column;
+            height: 25vh;
+            text-align: center;
+            padding: 1rem;
+            backdrop-filter: blur(3px);
+
+            z-index: 1000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }
@@ -66,6 +112,7 @@ p, div {
         margin-bottom: 2.5rem;
     }
 }
+
 .post-body {
     margin-top: 2rem;
     padding: 0.4rem;
@@ -124,5 +171,5 @@ p, div {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }

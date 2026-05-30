@@ -8,5 +8,17 @@
         <li><%= link_to "impression", posts_path(category: "impression") %></li>
         <li><%= link_to "guides", posts_path(category: "guide") %></li>
     </ul>
+    <div class="theme-menu" data-controller="theme">
+        <div>
+            <%= image_tag "ph.jpg", size: "32", alt: "Temporary placeholder image",
+                class: "theme-icon",
+                data: { action: "click->theme#menu"} %>
+        </div>
+        <div class="theme-dropdown-menu hidden" data-theme-target="selection">
+            <div>Dark</div>
+            <div>Light</div>
+            <div>Custom</div>
+            <div>Loud</div>
+        </div>
+    </div>
 </nav> 
-
