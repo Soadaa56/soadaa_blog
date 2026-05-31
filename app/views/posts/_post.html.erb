@@ -6,11 +6,13 @@
   </div>
 
   <div class="capitalize small-text">
-    <% if post.created_at == post.updated_at %>
+    <div>
       <%= post.category %> - <%= post.created_at.to_fs(:long) %>
-    <% else %>
-      <div><%= post.category %> - <%= post.created_at.to_fs(:long)%></div>
-      <div>Last updated: <%= post.updated_at.to_fs(:long) %></div>
+    </div>
+    <% if post.created_at != post.updated_at %>
+      <div>
+        Last updated: <%= post.updated_at.to_fs(:long) %>
+      </div>
     <% end %>
   </div>
 
