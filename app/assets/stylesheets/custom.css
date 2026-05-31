@@ -9,7 +9,7 @@
     /* Dark */
     --primary-color: black;
     --secondary-color: tan;
-    --accent-color: lightblue;
+    --accent-color: lightBlue;
     --text-color: #faf5f6e3;
     --background-color: #123;
 }
@@ -20,16 +20,24 @@ body.light {
     --secondary-color: purple;
     --accent-color: tan;
     --text-color: gray;
-    --background-color: aliceblue;
+    --background-color: aliceBlue;
 }
 
 /* Loud */
-body.loud {
+body.neon {
     --primary-color: silver;
     --secondary-color: purple;
     --accent-color: firebrick;
     --text-color: green;
     --background-color: magenta;
+}
+
+body.milknthingzz {
+    --primary-color: rebeccaPurple;
+    --secondary-color: thistle;
+    --accent-color: paleGreen;
+    --text-color: lavender;
+    --background-color: mediumOrchid;
 }
 
     /* Element type selectors */
@@ -182,6 +190,14 @@ p {
 
 .underline {
     text-decoration: underline;
+}
+
+.italy {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 600;
 }
 
 .small-text {
