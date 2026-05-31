@@ -7,9 +7,8 @@
 
     <div class="home-post">
         <h1 class="home-latest-post-header">Latest Post</h1>
-
-        <div class="capitalize">
+        <p class="capitalize">
             <%= @post.category %> - <%= @post.created_at.to_fs(:long) %> - <%= link_to @post.title, @post %>
-        </div>
+        </p>
     </div>
 </main>
