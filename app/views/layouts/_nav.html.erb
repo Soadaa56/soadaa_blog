@@ -14,11 +14,13 @@
                 class: "theme-icon",
                 data: { action: "click->theme#menu"} %>
         </div>
-        <ul class="nav-list theme-dropdown-menu hidden" data-theme-target="selection" >
-            <li>Dark</li>
-            <li>Light</li>
-            <li>Milknthingzz</li>
-            <li>Neon</li>
+        <ul class="nav-list theme-dropdown-menu bold hidden capitalize" 
+            data-theme-target="selection" 
+            data-action="click->theme#selectTheme">
+            <li data-theme-value="dark">dark</li>
+            <li data-theme-value="light">light</li>
+            <li data-theme-value="milk">milknthingzz</li>
+            <li data-theme-value="neon">neon</li>
         </ul>
     </div>
 </nav> 

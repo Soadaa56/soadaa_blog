@@ -1,7 +1,6 @@
 /*  Primary color not really used, but then the only 'most used/primary' color 
     is either text or background color, which I like the var name used as is. 
 */
-
         /* Mobile Default */
 
     /* pseudo slectors */
@@ -17,10 +16,10 @@
 /* Light */
 body.light {
     --primary-color: white;
-    --secondary-color: purple;
-    --accent-color: tan;
+    --secondary-color: blue;
+    --accent-color: midnightblue;
     --text-color: gray;
-    --background-color: aliceBlue;
+    --background-color: ivory;
 }
 
 /* Loud */
@@ -32,12 +31,12 @@ body.neon {
     --background-color: magenta;
 }
 
-body.milknthingzz {
-    --primary-color: rebeccaPurple;
+body.milk {
+    --primary-color: green;
     --secondary-color: thistle;
     --accent-color: paleGreen;
     --text-color: lavender;
-    --background-color: mediumOrchid;
+    --background-color: rebeccaPurple;
 }
 
     /* Element type selectors */
@@ -106,24 +105,6 @@ p {
     .theme-menu {
         position: relative;
         margin-left: 2rem;
-
-        .theme-dropdown-menu {
-            position: fixed;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-
-            display: flex;
-            flex-direction: column;
-            height: 25vh;
-            text-align: center;
-            padding: 1rem;
-            backdrop-filter: blur(3px);
-
-            z-index: 1000;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
     }
 }
 
@@ -146,6 +127,37 @@ p {
 
 .post-show-back {
     margin-top: 4rem;
+}
+
+.theme-dropdown-menu {
+    position: fixed;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    outline: 4px solid var(--primary-color);
+
+    display: flex;
+    flex-direction: column;
+    /* height: 33vh; */
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    backdrop-filter: blur(3px);
+
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    li {
+        width: 100%;
+        color: var(--background-color);
+        background-color: var(--accent-color);
+        filter: brightness(110%);
+        text-align: center;
+        margin: 0.5rem;
+        padding: 0.2rem;
+        outline: 2px solid red;
+    }
 }
 
 /* Tablet */
