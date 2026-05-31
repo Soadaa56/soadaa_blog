@@ -1,5 +1,10 @@
-/* Mobile Default */
-/* pseudo slectors */
+/*  Primary color not really used, but then the only 'most used/primary' color 
+    is either text or background color, which I like the var name used as is. 
+*/
+
+        /* Mobile Default */
+
+    /* pseudo slectors */
 :root {
     /* Dark */
     --primary-color: black;
@@ -18,7 +23,16 @@ body.light {
     --background-color: aliceblue;
 }
 
-/* Element type selectors */
+/* Loud */
+body.loud {
+    --primary-color: silver;
+    --secondary-color: purple;
+    --accent-color: firebrick;
+    --text-color: green;
+    --background-color: magenta;
+}
+
+    /* Element type selectors */
 *:focus-visible {
     outline: 3px solid hotpink;
 }
@@ -44,7 +58,11 @@ a:hover {
 
 abbr {
   font-style: italic;
-  color: chocolate;
+  color: var(--secondary-color);
+}
+
+article {
+    color: var(--text-color);
 }
 
 h1, h2, h3, h4, h5, h6  {
@@ -55,7 +73,7 @@ p {
     color: var(--text-color)
 }
 
-/* ID selectors */
+    /* ID selectors */
 #nav-menu {
     max-width: 600px;
     display: flex;
@@ -101,7 +119,7 @@ p {
     }
 }
 
-/* Class selectors */
+    /* Class selectors */
 .home-header {
     margin-bottom: 2rem;
 }
@@ -136,7 +154,7 @@ p {
     }
 }
 
-/* Desktop */
+        /* Desktop */
 @media screen and (min-width: 1024px) {  
     body {
         padding-left: 12rem;
@@ -149,7 +167,7 @@ p {
     }
 }
 
-/* Custom CSS classes */
+        /* Custom CSS classes */
 .capitalize {
     text-transform: capitalize;
 }
@@ -172,4 +190,8 @@ p {
 
 .hidden {
     display: none !important;
+}
+
+.text-color {
+    color: var(--text-color);
 }
