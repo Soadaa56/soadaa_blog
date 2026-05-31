@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+
 # Admin verification in development (suggested top of page, not sure if this matters)
 gem 'dotenv', groups: [:development, :test]
 
@@ -68,5 +69,5 @@ end
 gem "cssbundling-rails", "~> 1.4"
 
 # Custom Gems
-
-gem "commonmarker", "~> 2.8"
+gem "rack-attack", "~> 6.8" # Block/throttling abusive requests [Bots]
+gem "commonmarker", "~> 2.8" # Markdown for posting
