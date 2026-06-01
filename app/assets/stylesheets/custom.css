@@ -51,7 +51,16 @@ html {
 body {
     font-family: monospace, Consolas, Monaco, 'Courier New', monospace;
     background-color: var(--background-color);
+    /* padding: 1.5rem; */
+}
+
+main {
     padding: 1.5rem;
+}
+
+footer {
+    position: sticky;
+    background-color: var(--primary-color);
 }
 
 a, a:visited {
@@ -82,12 +91,9 @@ p {
 
     /* ID selectors */
 #nav-menu {
-    max-width: 600px;
+    max-width: 500px;
     display: flex;
-
-    & > * {
-        outline: 5px solid mediumaquamarine;
-    }
+    padding: 0.5rem;
 
     .nav-list {
         display: flex;
@@ -104,7 +110,7 @@ p {
 
     .theme-menu {
         position: relative;
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 }
 
@@ -140,8 +146,7 @@ p {
     /* height: 33vh; */
     align-items: center;
     text-align: center;
-    padding: 2rem;
-    backdrop-filter: blur(3px);
+    padding: 1.5rem;
 
     z-index: 1000;
     top: 50%;
@@ -149,6 +154,7 @@ p {
     transform: translate(-50%, -50%);
 
     li {
+        list-style: none;
         width: 100%;
         color: var(--background-color);
         background-color: var(--accent-color);
@@ -156,8 +162,42 @@ p {
         text-align: center;
         margin: 0.5rem;
         padding: 0.2rem;
-        outline: 2px solid red;
+        outline: 1px solid var(--primary-color);
+        box-shadow: 2px 0px 8px 0px;
+
     }
+}
+
+.footer-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    footer {
+        min-height: 200px;
+        margin-top: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+
+            .footer-link-item {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+        }
+
+        .footer-image {
+            margin-top: 1rem;
+        }
+    }
+
 }
 
 /* Tablet */

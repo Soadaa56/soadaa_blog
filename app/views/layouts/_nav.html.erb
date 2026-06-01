@@ -9,12 +9,11 @@
         <li><%= link_to "guides", posts_path(category: "guide") %></li>
     </ul>
     <div class="theme-menu" data-controller="theme">
-        <div>
-            <%= image_tag "ph.jpg", size: "32", alt: "Temporary placeholder image",
-                class: "theme-icon",
-                data: { action: "click->theme#menu"} %>
-        </div>
-        <ul class="nav-list theme-dropdown-menu bold hidden capitalize" 
+        <%= image_tag "svg/sunray.svg", size: "36", 
+            alt: "Sunray svg; icon for altering sites color theme.",
+            class: "theme-icon",
+            data: { action: "click->theme#menu" } %>
+        <ul class="theme-dropdown-menu bold hidden capitalize" 
             data-theme-target="selection" 
             data-action="click->theme#selectTheme">
             <li data-theme-value="dark">dark</li>
