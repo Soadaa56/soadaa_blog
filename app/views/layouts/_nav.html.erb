@@ -13,6 +13,9 @@
             alt: "Sunray svg; icon for altering sites color theme.",
             class: "theme-icon",
             data: { action: "click->theme#menu" } %>
+        <div class="menu-bg-overlay hidden"
+            data-theme-target="selection"    
+        ></div>
         <ul class="theme-dropdown-menu bold hidden capitalize" 
             data-theme-target="selection" 
             data-action="click->theme#selectTheme">

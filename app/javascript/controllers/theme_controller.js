@@ -7,7 +7,12 @@ export default class extends Controller {
   connect() {
     useClickOutside(this)
     const saved = localStorage.getItem("theme")
-    if (saved) document.body.classList.add(saved)
+    
+    if (saved) {
+      document.body.classList.add(saved)
+    } else {
+      document.body.classList.add("dark")
+    }
   }
 
   clickOutside(event) {
@@ -22,10 +27,14 @@ export default class extends Controller {
   }
 
   menu() {
-    this.selectionTarget.classList.toggle("hidden")
+    this.selectionTargets.forEach(element => {
+      element.classList.toggle("hidden")
+    })
   }
 
   close() {
-    this.selectionTarget.classList.add("hidden")
+    this.selectionTargets.forEach(element => {
+      element.classList.toggle("hidden")
+    })
   }
 }
