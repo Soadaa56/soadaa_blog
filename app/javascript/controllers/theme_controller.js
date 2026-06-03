@@ -1,22 +1,11 @@
 import { Controller } from "@hotwired/stimulus"
-import { useClickOutside } from 'stimulus-use'
 
 export default class extends Controller {
   static targets = [ "selection" ]
 
   connect() {
-    useClickOutside(this)
     const saved = localStorage.getItem("theme")
-    
-    if (saved) {
-      document.body.classList.add(saved)
-    } else {
-      document.body.classList.add("dark")
-    }
-  }
-
-  clickOutside(event) {
-    this.close()
+    if (saved) document.body.classList.add(saved)
   }
 
   selectTheme(event) {
@@ -27,12 +16,6 @@ export default class extends Controller {
   }
 
   menu() {
-    this.selectionTargets.forEach(element => {
-      element.classList.toggle("hidden")
-    })
-  }
-
-  close() {
     this.selectionTargets.forEach(element => {
       element.classList.toggle("hidden")
     })
