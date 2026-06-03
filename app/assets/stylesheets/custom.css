@@ -26,8 +26,8 @@ body.light {
 body.neon {
     --primary-color: silver;
     --secondary-color: purple;
-    --accent-color: firebrick;
-    --text-color: green;
+    --accent-color: lightgreen;
+    --text-color: darkslateblue;
     --background-color: magenta;
 }
 
@@ -103,8 +103,7 @@ p {
 
     /* ID selectors */
 #nav-menu {
-    max-width: 500px;
-    display: flex;
+    max-width: 80vw;
     padding: 2rem 1rem;
 
     .nav-list {
@@ -114,6 +113,7 @@ p {
         list-style-type: none;
         justify-content: center;
         padding-inline-start: 0;
+        padding-inline-end: 1rem;
         overflow: visible;
         li {
             min-width: 0;
@@ -121,16 +121,20 @@ p {
         }
     }
 
-    .theme-menu {
-        margin-right: 1rem;
+    .theme-menu-toggle {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        aspect-ratio: 1;
     }
 
     .menu-bg-overlay {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 100;
         background: rgb(0 0 0 / 0.3);
         backdrop-filter: blur(0.3rem);
     }
@@ -166,7 +170,7 @@ p {
     opacity: 80%;
 }
 
-.theme-dropdown-menu {
+.theme-popup-menu {
     position: fixed;
     background-color: var(--accent-color);
     color: var(--primary-color);
@@ -176,18 +180,13 @@ p {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1.5rem;
+    padding: 3rem 1rem 2rem 1rem;
 
-    z-index: 1000;
+    z-index: 100;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    &::before {
-        display: inline-block;
-        content: "\00d7"; /* X */
-        font-size: 2rem;
-    }
+    transition: transform 1000ms;
 
     li {
         list-style: none;
@@ -196,12 +195,17 @@ p {
         background-color: var(--accent-color);
         filter: brightness(110%);
         text-align: center;
-        margin: 0.5rem;
+        margin: 0.4rem 1rem;
         padding: 0.2rem;
         outline: 1px solid var(--primary-color);
-        box-shadow: 2px 0px 8px 0px;
+        box-shadow: 2px 0px 8px 0px;        
+    }
 
-        
+    .theme-popup-close {
+        position: absolute;
+        padding: 1rem;
+        top: 1%;
+        right: 5%;
     }
 }
 
@@ -297,4 +301,8 @@ p {
 
 .text-color {
     color: var(--text-color);
+}
+
+.debug {
+    outline: 2px solid red;
 }

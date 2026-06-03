@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = [ "selection" ]
+  static targets = [ "selection", "close" ]
 
   connect() {
     const saved = localStorage.getItem("theme")
@@ -10,14 +10,20 @@ export default class extends Controller {
 
   selectTheme(event) {
     const theme = event.target.dataset.themeValue
-    document.body.classList.remove("dark", "light", "milk", "neon")
+    document.body.classList.remove("dark", "light", "milk", "neon", "colorblind")
     document.body.classList.add(theme)
     localStorage.setItem("theme", theme)
   }
 
-  menu() {
+  openMenu() {
     this.selectionTargets.forEach(element => {
-      element.classList.toggle("hidden")
+      element.classList.remove("hidden")
     })
+  } 
+
+  closeMenu () {
+    this.selectionTargets.forEach(element => {
+      element.classList.add("hidden")
+    });
   }
 }

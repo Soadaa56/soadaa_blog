@@ -8,23 +8,37 @@
         <li><%= link_to "impression", posts_path(category: "impression") %></li>
         <li><%= link_to "guides", posts_path(category: "guide") %></li>
     </ul>
-    <div aria-hidden="true" class="theme-menu" data-controller="theme">
+    <div aria-hidden="true" class="theme-menu-toggle" data-controller="theme">
         <%= image_tag "svg/sunray.svg", size: "36", 
             alt: "Sunray svg; icon for altering sites color theme.",
             class: "theme-icon",
-            data: { action: "click->theme#menu" } %>
-        <div class="menu-bg-overlay hidden"
-            data-theme-target="selection"    
-        ></div>
-        <ul class="theme-dropdown-menu bold hidden capitalize" 
-            data-theme-target="selection" 
-            data-action="click->theme#selectTheme">
+            data: { action: "click->theme#openMenu" } %>
 
-            <li data-theme-value="dark">dark</li>
-            <li data-theme-value="light">light</li>
-            <li data-theme-value="milk">milknthingzz</li>
-            <li data-theme-value="neon">neon</li>
-            <li data-theme-value="colorblind">colorblind</li>
+        <div class="menu-bg-overlay hidden"
+            data-theme-target="selection"  
+            data-action="click->theme#closeMenu"  
+        ></div>
+
+        <ul class="theme-popup-menu bold hidden capitalize" 
+            data-theme-target="selection" >
+            <span class="theme-popup-close"
+            data-action="click->theme#closeMenu" >X</span>
+            <li data-action=
+                "click->theme#selectTheme"
+                data-theme-value="dark">
+                dark</li>
+            <li data-action="click->theme#selectTheme"
+                data-theme-value="light">
+                light</li>
+            <li data-action="click->theme#selectTheme"
+                data-theme-value="milk">
+                milknthingzz</li>
+            <li data-action="click->theme#selectTheme"
+                data-theme-value="neon">
+                neon</li>
+            <li data-action="click->theme#selectTheme"
+                data-theme-value="colorblind">
+                colorblind</li>
         </ul>
     </div>
 </nav> 
