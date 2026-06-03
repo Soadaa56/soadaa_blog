@@ -6,7 +6,7 @@
     /* pseudo slectors */
 :root {
     /* Dark */
-    --primary-color: black;
+    --primary-color: darkslateblue;
     --secondary-color: tan;
     --accent-color: lightBlue;
     --text-color: #faf5f6e3;
@@ -15,10 +15,10 @@
 
 /* Light */
 body.light {
-    --primary-color: white;
+    --primary-color: grey;
     --secondary-color: blue;
-    --accent-color: midnightblue;
-    --text-color: gray;
+    --accent-color: mediumseagreen;
+    --text-color: black;
     --background-color: ivory;
 }
 
@@ -37,6 +37,14 @@ body.milk {
     --accent-color: paleGreen;
     --text-color: lavender;
     --background-color: rebeccaPurple;
+}
+
+body.colorblind {
+    --primary-color: #CC79A7;
+    --secondary-color: #E69F00;
+    --accent-color: #D55E00;
+    --text-color: black;
+    --backgroundcolor: #0072B2;
 }
 
     /* Element type selectors */
@@ -94,6 +102,12 @@ p {
     max-width: 500px;
     display: flex;
     padding: 0.5rem;
+    justify-content: space-between;
+
+    img {
+        margin: 1rem;
+        padding-right: 0.5rem;
+    }
 
     .nav-list {
         display: flex;
@@ -152,7 +166,6 @@ p {
 
     display: flex;
     flex-direction: column;
-    /* height: 33vh; */
     align-items: center;
     text-align: center;
     padding: 1.5rem;
@@ -161,6 +174,12 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    &::before {
+        display: inline-block;
+        content: "\00d7"; /* X */
+        font-size: 2rem;
+    }
 
     li {
         list-style: none;
@@ -174,6 +193,7 @@ p {
         outline: 1px solid var(--primary-color);
         box-shadow: 2px 0px 8px 0px;
 
+        
     }
 }
 
@@ -220,7 +240,6 @@ p {
     #nav-menu {
         max-width: 800px;
         margin: 0 auto;
-        outline: 1px solid red;
     }
 }
 
