@@ -59,11 +59,15 @@ html {
 body {
     font-family: monospace, Consolas, Monaco, 'Courier New', monospace;
     background-color: var(--background-color);
-    /* padding: 1.5rem; */
 }
 
 main {
-    padding: 1.5rem;
+    padding: 1rem;
+    &::after {
+        content: "";
+        display: block;
+        padding-bottom: 70vh;
+    }
 }
 
 footer {
@@ -101,29 +105,24 @@ p {
 #nav-menu {
     max-width: 500px;
     display: flex;
-    padding: 0.5rem;
-    justify-content: space-between;
-
-    img {
-        margin: 1rem;
-        padding-right: 0.5rem;
-    }
+    padding: 2rem 1rem;
 
     .nav-list {
         display: flex;
         flex-wrap: wrap;
+        gap: 0.75rem;
         list-style-type: none;
         justify-content: center;
         padding-inline-start: 0;
         overflow: visible;
         li {
             min-width: 0;
-            margin: 0.4rem;
+            gap: 1rem;
         }
     }
 
     .theme-menu {
-        margin-right: 0.25rem;
+        margin-right: 1rem;
     }
 
     .menu-bg-overlay {
@@ -133,7 +132,7 @@ p {
         width: 100%;
         height: 100%;
         background: rgb(0 0 0 / 0.3);
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(0.3rem);
     }
 }
 
@@ -156,6 +155,15 @@ p {
 
 .post-show-back {
     margin-top: 4rem;
+}
+
+.theme-icon:hover {
+    filter: brightness(150%);
+    border-block-start: 1px solid transparent;
+    border-block-end: 1px solid transparent;
+    background: radial-gradient(var(--secondary-color), transparent);
+    border-radius: 70%;
+    opacity: 80%;
 }
 
 .theme-dropdown-menu {
@@ -198,13 +206,11 @@ p {
 }
 
 .footer-container {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 
     footer {
-        min-height: 200px;
-        margin-top: auto;
+        min-height: 20vh;
         padding: 1rem;
         display: flex;
         flex-direction: column;
@@ -240,14 +246,14 @@ p {
     #nav-menu {
         max-width: 800px;
         margin: 0 auto;
+        justify-content: space-between;
     }
 }
 
         /* Desktop */
 @media screen and (min-width: 1024px) {  
     body {
-        padding-left: 12rem;
-        padding-right: 12rem;
+        padding-inline: 12rem;
         font-size: 1.25rem /* 20px */;
     }
 
