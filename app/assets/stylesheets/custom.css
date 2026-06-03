@@ -9,8 +9,8 @@
     --primary-color: darkslateblue;
     --secondary-color: tan;
     --accent-color: lightBlue;
-    --text-color: #faf5f6e3;
-    --background-color: #123;
+    --text-color: hsla(348 33 97 / 0.89);
+    --background-color: hsl(210 50 13);
 }
 
 /* Light */
@@ -40,11 +40,11 @@ body.milk {
 }
 
 body.colorblind {
-    --primary-color: #CC79A7;
-    --secondary-color: #E69F00;
-    --accent-color: #D55E00;
+    --primary-color: hsl(327 45 64);
+    --secondary-color: hsl(41 100 45);
+    --accent-color: hsl(26 100 42);
     --text-color: black;
-    --backgroundcolor: #0072B2;
+    --backgroundcolor: hsl(202 100 35);
 }
 
     /* Element type selectors */
