@@ -8,7 +8,7 @@
         <li><%= link_to "impression", posts_path(category: "impression") %></li>
         <li><%= link_to "guides", posts_path(category: "guide") %></li>
     </ul>
-    <div class="theme-menu" data-controller="theme">
+    <div aria-hidden="true" class="theme-menu" data-controller="theme">
         <%= image_tag "svg/sunray.svg", size: "36", 
             alt: "Sunray svg; icon for altering sites color theme.",
             class: "theme-icon",
