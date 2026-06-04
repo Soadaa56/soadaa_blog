@@ -11,6 +11,9 @@
     --accent-color: lightBlue;
     --text-color: hsla(348 33 97 / 0.89);
     --background-color: hsl(210 50 13);
+    .theme-icon {
+        filter: invert(70%);
+    }
 }
 
 /* Light */
@@ -20,6 +23,9 @@ body.light {
     --accent-color: mediumseagreen;
     --text-color: black;
     --background-color: ivory;
+    .theme-icon {
+        filter: invert(0);
+    }
 }
 
 /* Loud */
@@ -29,6 +35,9 @@ body.neon {
     --accent-color: lightgreen;
     --text-color: darkslateblue;
     --background-color: magenta;
+    .theme-icon {
+        filter: invert(70%);
+    }
 }
 
 body.milk {
@@ -37,6 +46,9 @@ body.milk {
     --accent-color: paleGreen;
     --text-color: lavender;
     --background-color: rebeccaPurple;
+    .theme-icon {
+        filter: invert(70%);
+    }
 }
 
 body.colorblind {
@@ -45,6 +57,9 @@ body.colorblind {
     --accent-color: hsl(26 100 42);
     --text-color: black;
     --backgroundcolor: hsl(202 100 35);
+    .theme-icon {
+        filter: invert(90%);
+    }
 }
 
     /* Element type selectors */
