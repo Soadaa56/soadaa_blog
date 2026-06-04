@@ -1,0 +1,8 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24">
+  <!-- dot -->
+  <circle cx="5" cy="19" r="2"></circle>
+  <!-- small arc -->
+  <path d="M4 12.5 C9.8 12.5 14.5 17.2 14.5 23" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
+  <!-- large arc -->
+  <path d="M4 6 C13.9 6 22 14.1 22 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
+</svg>

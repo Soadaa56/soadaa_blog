@@ -236,7 +236,7 @@ p {
     flex-direction: column;
 
     footer {
-        min-height: 20vh;
+        min-height: 15vh;
         padding: 1rem;
         display: flex;
         flex-direction: column;
