@@ -256,6 +256,11 @@ p {
 
         /* Desktop */
 @media screen and (min-width: 1024px) {  
+    
+    main::after {
+        padding-bottom: 100vh;
+    }
+
     body {
         padding-inline: 12rem;
         font-size: 1.25rem /* 20px */;
@@ -301,6 +306,11 @@ p {
 
 .text-color {
     color: var(--text-color);
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
 }
 
 .debug {
