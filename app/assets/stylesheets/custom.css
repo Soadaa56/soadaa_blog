@@ -36,18 +36,18 @@ body.neon {
     --text-color: darkslateblue;
     --background-color: magenta;
     .theme-icon {
-        filter: invert(70%);
+        filter: invert(0);
     }
 }
 
 body.milk {
-    --primary-color: green;
-    --secondary-color: thistle;
-    --accent-color: paleGreen;
-    --text-color: lavender;
-    --background-color: rebeccaPurple;
+    --primary-color: hsl(336, 17%, 11%);
+    --secondary-color: hsl(98, 64%, 83%);
+    --accent-color: hsl(244, 39%, 49%);
+    --text-color: hsl(0, 17%, 98%);
+    --background-color: hsl(231, 30%, 74%);
     .theme-icon {
-        filter: invert(70%);
+        filter: invert(0);
     }
 }
 
