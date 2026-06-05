@@ -15,3 +15,7 @@
     </p>
   <% end %>
 </div>
+
+<% if @posts.first.nil? %>
+  <p>No posts of this category type yet!</p>
+<% end %>
