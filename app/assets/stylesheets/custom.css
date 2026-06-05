@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6  {
 }
 
 p {
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
     /* ID selectors */
@@ -342,6 +342,10 @@ p {
 .flex {
     display: flex;
     gap: var(--gap, 1rem);
+}
+
+.prose > * + * {
+    margin-block-start: var(--prose-flow, 1em);
 }
 
 .debug {

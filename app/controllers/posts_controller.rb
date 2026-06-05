@@ -6,8 +6,16 @@ class PostsController < ApplicationController
   )
   before_action :set_post, only: %i[ show edit update destroy ]
 
+  # Atom/RSS feed
+  def feed
+    @posts = Post.published.order(created_at: :desc).limit(20)
+    respond_to do |format|
+      format.atom { render layout: false }
+    end
+  end
+
   # GET /posts or /posts.json
-  def index 
+  def index
       if params[:category].present?
        @posts = Post.where(category: params[:category]).published.order(created_at: :desc)
        @category = params[:category]
@@ -19,7 +27,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
-    require 'commonmarker'
+    require "commonmarker"
     @markdown = Commonmarker.to_html(@post.body).html_safe
   end
 
