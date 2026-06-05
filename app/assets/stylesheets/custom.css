@@ -166,6 +166,11 @@ p {
 .home-header {
     margin-bottom: 2rem;
 }
+
+.home-intro > p {
+    margin: 1rem 0rem;
+}
+
 .home-post {
     margin-top: 4rem;
 
