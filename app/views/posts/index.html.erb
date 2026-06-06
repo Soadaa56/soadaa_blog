@@ -9,7 +9,7 @@
 <main id="posts">
   <% @posts.each do |post| %>
     <p class="capitalize">
-      <%= time_tag post.created_at, post.created_at.strftime("%B %d, %Y") %>
+      <%= time_tag post.created_at, post.created_at.strftime("%b %d, %Y") %>
       -
       <%= link_to post.title, post %>
     </p>
