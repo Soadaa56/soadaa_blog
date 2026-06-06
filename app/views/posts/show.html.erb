@@ -4,7 +4,7 @@
 
 <main>
   <div class="post-show">
-    <% cache @post do %>
+    <% cache @post do |post| %>
       <%= render @post %>
     <% end %>
   </div>

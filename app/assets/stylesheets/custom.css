@@ -264,6 +264,13 @@ p {
     }
 }
 
+.post-form {
+    color: var(--text-color);
+    & > div {
+        margin: 1rem;
+    }
+}
+
 /* Tablet */
 @media screen and (min-width: 768px) {
     body {
