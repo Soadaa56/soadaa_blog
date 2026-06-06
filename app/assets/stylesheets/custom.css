@@ -1,9 +1,10 @@
-/*  Primary color not really used, but then the only 'most used/primary' color 
-    is either text or background color, which I like the var name used as is. 
-*/
-        /* Mobile Default */
-
-    /* pseudo slectors */
+/* ===================
+   ===================
+    Mobile (Default)
+   =================== 
+   =================== */
+/* ===== Color Theme ===== */
+/* Weird naming convention since primary is used the least, but the names fit for how I use the rest */
 :root {
     /* Dark */
     --primary-color: darkslateblue;
@@ -62,7 +63,9 @@ body.colorblind {
     }
 }
 
-    /* Element type selectors */
+/* ===================
+    Element Selectors
+   =================== */
 *:focus-visible {
     outline: 3px solid hotpink;
 }
@@ -110,8 +113,16 @@ h1, h2, h3, h4, h5, h6  {
 p {
     color: var(--text-color);
 }
+/* ===================
+        ID selectors
+   =================== */
+#posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2rem;
+}
 
-    /* ID selectors */
 #nav-menu {
     max-width: 80vw;
     padding: 2rem 1rem;
@@ -149,44 +160,9 @@ p {
         backdrop-filter: blur(0.3rem);
     }
 }
-
-#posts {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-top: 2rem;
-}
-
-    /* Class selectors */
-.home-header {
-    margin-bottom: 2rem;
-}
-
-.home-intro > p {
-    margin: 1.5rem 0rem;
-}
-
-.home-post {
-    margin-top: 4rem;
-
-    .home-latest-post-header {
-        margin-bottom: 2.5rem;
-    }
-}
-
-.post-show-back {
-    margin-top: 4rem;
-}
-
-.theme-icon:hover {
-    filter: brightness(150%);
-    border-block-start: 1px solid transparent;
-    border-block-end: 1px solid transparent;
-    background: radial-gradient(var(--secondary-color), transparent);
-    border-radius: 70%;
-    opacity: 80%;
-}
-
+/* ===================
+    Class Selectors
+   =================== */
 .theme-popup-menu {
     position: fixed;
     background-color: var(--accent-color);
@@ -225,6 +201,36 @@ p {
         right: 2%;
     }
 }
+
+.home-header {
+    margin-bottom: 2rem;
+}
+
+.home-intro > p {
+    margin: 1.5rem 0rem;
+}
+
+.home-post {
+    margin-top: 4rem;
+
+    .home-latest-post-header {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.post-show-back {
+    margin-top: 4rem;
+}
+
+.theme-icon:hover {
+    filter: brightness(150%);
+    border-block-start: 1px solid transparent;
+    border-block-end: 1px solid transparent;
+    background: radial-gradient(var(--secondary-color), transparent);
+    border-radius: 70%;
+    opacity: 80%;
+}
+
 
 .footer-container {
     display: flex;
@@ -271,7 +277,11 @@ p {
     }
 }
 
-/* Tablet */
+/* ===================
+   ===================
+        Tablet
+   =================== 
+   =================== */
 @media screen and (min-width: 768px) {
     body {
         padding-left: 4rem;
@@ -286,7 +296,11 @@ p {
     }
 }
 
-        /* Desktop */
+/* ===================
+   ===================
+        Desktop
+   =================== 
+   =================== */
 @media screen and (min-width: 1024px) {  
     
     main::after {
