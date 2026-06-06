@@ -216,9 +216,10 @@ p {
 
     .theme-popup-close {
         position: absolute;
-        padding: 1rem;
+        padding: 0.5rem 1rem 0.9rem 1rem;
         top: 1%;
-        right: 5%;
+        right: 2%;
+        outline: 1px solid black;
     }
 }
 
