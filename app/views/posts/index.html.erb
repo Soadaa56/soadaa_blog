@@ -8,11 +8,13 @@
 
 <main id="posts">
   <% @posts.each do |post| %>
-    <p class="capitalize">
-      <%= time_tag post.created_at, post.created_at.strftime("%b %d, %Y") %>
-      -
-      <%= link_to post.title, post %>
-    </p>
+    <% cache post do %>
+      <p class="capitalize">
+        <%= time_tag post.created_at, post.created_at.strftime("%b %d, %Y") %>
+        -
+        <%= link_to post.title, post %>
+      </p>
+    <% end %>
   <% end %>
 
 <% if @posts.first.nil? %>
