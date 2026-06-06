@@ -179,10 +179,6 @@ p {
     }
 }
 
-.post-body {
-    margin-top: 2rem;
-}
-
 .post-show-back {
     margin-top: 4rem;
 }
@@ -341,6 +337,7 @@ p {
 
 .prose > * + * {
     margin-block-start: var(--prose-flow, 1em);
+    margin-top: 2rem;
 }
 
 .debug {
