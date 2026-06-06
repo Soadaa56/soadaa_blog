@@ -6,16 +6,18 @@
   <%= @category.pluralize %>
 </h1>
 
-<div id="posts">
+<main id="posts">
   <% @posts.each do |post| %>
     <p class="capitalize">
+      <%= post.category%>
+      -
       <%= post.created_at.strftime("%B %d, %Y") %> 
       -
       <%= link_to post.title, post %>
     </p>
   <% end %>
-</div>
 
 <% if @posts.first.nil? %>
   <p>No posts of this category type yet!</p>
 <% end %>
+</main>

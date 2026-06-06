@@ -1,14 +1,19 @@
-<h1 class="home-header">Soadaa's Blog</h1>
-<div class="home-intro">
-    <p>Hello and welcome to my blog!</p>
-    <p>This blog will be my creative outlet with writing whatever I feel about. This will probably include games (reviews, impressions or just gushing about my favorites).
-        This will more than likely also include "responses" to youtube videos or articles I either disagree with or agree but I think I have something worthwhile to add.
-    </p>
-</div>
-
-<div class="home-post">
-    <h1 class="home-latest-post-header">Latest Post</h1>
-    <p class="capitalize">
-        <%= @post.category %> - <%= @post.created_at.to_fs(:long) %> - <%= link_to @post.title, @post %>
-    </p>
-</div>
+<main>
+    <section>
+        <h1 class="home-header">Soadaa's Blog</h1>
+        <div class="home-intro">
+            <p>Hello and welcome to my blog!</p>
+            <p>This blog will be my creative outlet with writing whatever I feel about. This will probably include games (reviews, impressions or just gushing about my favorites).
+                This will more than likely also include "responses" to youtube videos or articles I either disagree with or agree but I think I have something worthwhile to add.
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="home-post">
+            <h1 class="home-latest-post-header">Latest Post</h1>
+            <p class="capitalize">
+                <%= @post.category %> - <%= @post.created_at.to_fs(:long) %> - <%= link_to @post.title, @post %>
+            </p>
+        </div>
+    </section>
+</main>

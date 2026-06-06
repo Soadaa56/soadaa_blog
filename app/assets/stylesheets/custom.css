@@ -76,15 +76,6 @@ body {
     background-color: var(--background-color);
 }
 
-main {
-    padding: 1rem;
-    &::after {
-        content: "";
-        display: block;
-        padding-bottom: 70vh;
-    }
-}
-
 footer {
     position: sticky;
     background-color: var(--primary-color);
@@ -258,7 +249,15 @@ p {
             margin-top: 1rem;
         }
     }
+}
 
+.yield-content {
+    padding: 1rem;
+    &::after {
+        content: "";
+        display: block;
+        padding-bottom: 70vh;
+    }
 }
 
 /* Tablet */
