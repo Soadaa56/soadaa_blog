@@ -22,7 +22,7 @@ body.light {
     --secondary-color: blue;
     --accent-color: mediumseagreen;
     --text-color: black;
-    --background-color: ivory;
+    --background-color: hsl(30, 80%, 91%);
     .theme-icon {
         filter: invert(0);
     }
@@ -55,7 +55,7 @@ body.colorblind {
     --primary-color: hsl(327 45 64);
     --secondary-color: hsl(41 100 45);
     --accent-color: hsl(26 100 42);
-    --text-color: black;
+    --text-color: white;
     --backgroundcolor: hsl(202 100 35);
     .theme-icon {
         filter: invert(90%);
