@@ -81,6 +81,10 @@ footer {
     background-color: var(--primary-color);
 }
 
+article {
+    color: var(--text-color);
+}
+
 a, a:visited {
     color: var(--accent-color);
 }
@@ -95,9 +99,6 @@ abbr {
   color: var(--secondary-color);
 }
 
-article {
-    color: var(--text-color);
-}
 
 h1, h2, h3, h4, h5, h6  {
     color: var(--secondary-color);
@@ -219,7 +220,6 @@ p {
         padding: 0.5rem 1rem 0.9rem 1rem;
         top: 1%;
         right: 2%;
-        outline: 1px solid black;
     }
 }
 
