@@ -4,12 +4,12 @@
    =================== 
    =================== */
 /* ===== Color Theme ===== */
-/* Weird naming convention since primary is used the least, but the names fit for how I use the rest */
 :root {
+/* Weird naming convention since primary is used the least, but the names fit for the rest */
     /* Dark */
-    --primary-color: darkslateblue;
-    --secondary-color: tan;
-    --accent-color: lightBlue;
+    --primary-color: rgb(72, 61, 139);
+    --secondary-color: rgb(210, 180, 140);
+    --accent-color: rgb(173, 216, 230);
     --text-color: hsla(348 33 97 / 0.89);
     --background-color: hsl(210 50 13);
     .theme-icon {
@@ -98,6 +98,7 @@ a, a:visited {
 a:hover {
     color: var(--secondary-color);
     filter: brightness(110%);
+    transition: color 400ms ease;
 }
 
 abbr {
@@ -124,7 +125,7 @@ p {
 }
 
 #nav-menu {
-    max-width: 80vw;
+    max-width: 90vw;
     padding: 2rem 1rem;
 
     .nav-list {
@@ -263,6 +264,7 @@ p {
 
 .yield-content {
     padding: 1rem;
+    border-top: 2px solid var(--primary-color);
     &::after {
         content: "";
         display: block;
@@ -284,14 +286,15 @@ p {
    =================== */
 @media screen and (min-width: 768px) {
     body {
-        padding-left: 4rem;
-        padding-right: 4rem;
         font-size: 1.125rem /* 18px */;
     }
 
+    .yield-content {
+        padding-inline: 5rem;
+    }
+
     #nav-menu {
-        max-width: 800px;
-        margin: 0 auto;
+        margin-inline: 0;
         justify-content: space-between;
     }
 }
@@ -308,12 +311,22 @@ p {
     }
 
     body {
-        padding-inline: 12rem;
+        /* padding-inline: 12rem; */
         font-size: 1.25rem /* 20px */;
     }
 
+    footer {
+        width: auto;
+    }
+
     #nav-menu {
-        min-width: 1000px;
+        .nav-list {
+            gap: 3rem;
+        }
+    }
+
+    .yield-content {
+        padding-inline: 10rem;
     }
 }
 
