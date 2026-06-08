@@ -2,6 +2,7 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "@stimulus-components/popover": "^7.0.0",
     "sass": "^1.99.0"
   },
   "scripts": {

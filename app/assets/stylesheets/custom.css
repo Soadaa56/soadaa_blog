@@ -7,9 +7,10 @@
 :root {
 /* Weird naming convention since primary is used the least, but the names fit for the rest */
     /* Dark */
-    --primary-color: rgb(72, 61, 139);
-    --secondary-color: rgb(210, 180, 140);
-    --accent-color: rgb(173, 216, 230);
+    --primary-color: hsl(248, 39%, 29%);
+    --primary-color-lighter: hsl(248, 39%, 39%);
+    --secondary-color: hsl(34, 44%, 69%);
+    --accent-color: hsl(195, 53%, 79%);
     --text-color: hsla(348 33 97 / 0.89);
     --background-color: hsl(210 50 13);
     .theme-icon {
@@ -19,11 +20,12 @@
 
 /* Light */
 body.light {
-    --primary-color: grey;
-    --secondary-color: blue;
-    --accent-color: mediumseagreen;
-    --text-color: black;
-    --background-color: hsl(30, 80%, 91%);
+    --primary-color: hsl(296, 39%, 31%);
+    --primary-color-lighter: hsl(296, 39%, 41%);
+    --secondary-color: hsl(341, 66%, 67%);
+    --accent-color: hsl(165, 70%, 46%);
+    --text-color: hsl(0, 0%, 0%); 
+    --background-color: hsl(15, 15%, 99%);
     .theme-icon {
         filter: invert(0);
     }
@@ -42,9 +44,10 @@ body.neon {
 }
 
 body.milk {
-    --primary-color: hsl(336, 17%, 11%);
+    --primary-color: hsl(336, 17%, 19%);
+    --primary-color-lighter: hsl(336, 17%, 29%);
     --secondary-color: hsl(98, 64%, 83%);
-    --accent-color: hsl(244, 39%, 49%);
+    --accent-color: hsl(244, 70%, 60%);
     --text-color: hsl(0, 17%, 98%);
     --background-color: hsl(231, 30%, 74%);
     .theme-icon {
@@ -53,7 +56,7 @@ body.milk {
 }
 
 body.colorblind {
-    --primary-color: hsl(327 45 64);
+    --primary-color: hsl(327 45 44);
     --secondary-color: hsl(41 100 45);
     --accent-color: hsl(26 100 42);
     --text-color: white;
@@ -120,8 +123,17 @@ p {
 #posts {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     padding-top: 2rem;
+    > * {
+        background: var(--primary-color);
+        padding: 0.5em;
+        outline: 1px solid var(--secondary-color);
+        box-shadow: 0.6em 0.3em 2em 0.1em black;
+        &:nth-child(odd) {
+            background-color: var(--primary-color-lighter, red);
+        }
+    }
 }
 
 #nav-menu {
@@ -221,6 +233,10 @@ p {
 
 .post-show-back {
     margin-top: 4rem;
+}
+
+.post-popover {
+    position: absolute;
 }
 
 .theme-icon:hover {
@@ -330,7 +346,11 @@ p {
     }
 }
 
-        /* Custom CSS classes */
+/* ===================
+   ===================
+    Custom Classes
+   =================== 
+   =================== */
 .capitalize {
     text-transform: capitalize;
 }
@@ -373,8 +393,7 @@ p {
 }
 
 .prose > * + * {
-    margin-block-start: var(--prose-flow, 1em);
-    margin-top: 2rem;
+    margin-block-start: var(--prose-flow, 1.5em);
 }
 
 .debug {

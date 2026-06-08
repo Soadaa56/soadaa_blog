@@ -9,11 +9,21 @@
 <main id="posts">
   <% @posts.each do |post| %>
     <% cache post do %>
-      <p class="capitalize">
-        <%= time_tag post.created_at, post.created_at.strftime("%b %d, %Y") %>
-        -
-        <%= link_to post.title, post %>
-      </p>
+      <div class="post-div" data-controller="popover">
+        <p class="capitalize">
+          <%= time_tag post.created_at, post.created_at.strftime("%b %d, %Y") %>
+          -
+          <%= link_to post.title, post, 
+              data: { action: "mouseenter->popover#show mouseleave->popover#hide" } %>
+          <% if post.cover_image.attached? %>
+            <template data-popover-target="content">
+              <div class="post-popover" data-popover-target="card">
+                <span><%= image_tag post.cover_image %></span>
+              </div>
+            </template>
+          <% end %>
+        </p>
+      </div>
     <% end %>
   <% end %>
 

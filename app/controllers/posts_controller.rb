@@ -17,10 +17,10 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
       if params[:category].present?
-       @posts = Post.where(category: params[:category]).published.order(created_at: :desc)
+       @posts = Post.where(category: params[:category]).published.order(created_at: :desc).includes([ :cover_image_attachment ])
        @category = params[:category]
       else
-       @posts = Post.published.order(created_at: :desc)
+       @posts = Post.published.order(created_at: :desc).includes([ :cover_image_attachment ])
        @category = "All Posts"
       end
   end
