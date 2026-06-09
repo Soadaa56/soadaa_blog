@@ -8,7 +8,6 @@
 /* Weird naming convention since primary is used the least, but the names fit for the rest */
     /* Dark */
     --primary-color: hsl(248, 39%, 29%);
-    --primary-color-lighter: hsl(248, 39%, 39%);
     --secondary-color: hsl(34, 44%, 69%);
     --accent-color: hsl(195, 53%, 79%);
     --text-color: hsla(348 33 97 / 0.89);
@@ -21,7 +20,6 @@
 /* Light */
 body.light {
     --primary-color: hsl(296, 39%, 31%);
-    --primary-color-lighter: hsl(296, 39%, 41%);
     --secondary-color: hsl(341, 66%, 67%);
     --accent-color: hsl(165, 70%, 46%);
     --text-color: hsl(0, 0%, 0%); 
@@ -45,7 +43,6 @@ body.neon {
 
 body.milk {
     --primary-color: hsl(336, 17%, 19%);
-    --primary-color-lighter: hsl(336, 17%, 29%);
     --secondary-color: hsl(98, 64%, 83%);
     --accent-color: hsl(244, 70%, 60%);
     --text-color: hsl(0, 17%, 98%);
@@ -129,9 +126,12 @@ p {
         background: var(--primary-color);
         padding: 0.5em;
         outline: 1px solid var(--secondary-color);
-        box-shadow: 0.6em 0.3em 2em 0.1em black;
+        box-shadow: 0.6em 0.3em 1em 0.1em var(--primary-color);
         &:nth-child(odd) {
-            background-color: var(--primary-color-lighter, red);
+            filter: brightness(0.9);
+            p {
+                filter: brightness(1.1);
+            }
         }
     }
 }
