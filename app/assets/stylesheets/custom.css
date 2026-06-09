@@ -240,6 +240,11 @@ p {
     position: absolute;
 }
 
+.post-img {
+    margin-bottom: 1rem;
+    outline: 2px solid var(--primary-color);
+}
+
 .theme-icon:hover {
     filter: brightness(150%);
     border-block-start: 1px solid transparent;

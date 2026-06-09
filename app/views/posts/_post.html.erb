@@ -17,9 +17,7 @@
   </div>
 
   <% if post.cover_image.attached? %>
-  <div>
-    <%= image_tag post.cover_image %>
-  </div>
+    <%= image_tag post.cover_image, class: "post-img" %>
   <% end %>
 
   <div class="prose">
