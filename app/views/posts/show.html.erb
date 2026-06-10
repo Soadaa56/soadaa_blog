@@ -1,6 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, @post.title %>
+<% content_for :title, "#{@post.title} - Soadaa's Blog" %>
+<%# content_for :description %>
+<% content_for :og_type, "article" %>
+<% if @post.cover_image.attached? %>
+  <% content_for :og_image, url_for(@post.cover_image) %>
+<% end %>
 
 <main>
   <div class="post-show">
