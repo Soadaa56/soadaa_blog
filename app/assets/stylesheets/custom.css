@@ -127,13 +127,14 @@ p {
         padding: 0.5em;
         outline: 1px solid var(--secondary-color);
         box-shadow: 0.6em 0.3em 1em 0.1em var(--primary-color);
-        &:nth-child(odd) {
+        /* This will block the IMG popover with the below CSS */
+        /* &:nth-child(odd) {
             filter: brightness(0.9);
             p {
                 filter: brightness(1.1);
                 filter: saturate(1.1);
             }
-        }
+        } */
     }
 }
 
@@ -236,13 +237,15 @@ p {
     margin-top: 4rem;
 }
 
-.post-popover {
-    position: absolute;
-}
-
 .post-img {
     margin-bottom: 1rem;
     outline: 2px solid var(--primary-color);
+}
+
+.post-popover {
+    position: absolute;
+    z-index: 200;
+    width: 65vw;
 }
 
 .theme-icon:hover {
@@ -311,13 +314,17 @@ p {
         font-size: 1.125rem /* 18px */;
     }
 
+    #nav-menu {
+        margin-inline: 0;
+        justify-content: space-between;
+    }
+
     .yield-content {
         padding-inline: 5rem;
     }
 
-    #nav-menu {
-        margin-inline: 0;
-        justify-content: space-between;
+    .post-popover {
+        width: 55vw;
     }
 }
 
@@ -349,6 +356,10 @@ p {
 
     .yield-content {
         padding-inline: 10rem;
+    }
+
+    .post-popover {
+        width: 50vw;
     }
 }
 

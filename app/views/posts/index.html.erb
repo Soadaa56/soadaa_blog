@@ -18,7 +18,7 @@
           <% if post.cover_image.attached? %>
             <template data-popover-target="content">
               <div class="post-popover" data-popover-target="card">
-                <span><%= image_tag post.cover_image %></span>
+                <span><%= image_tag post.cover_image, class: "post-img" %></span>
               </div>
             </template>
           <% end %>
