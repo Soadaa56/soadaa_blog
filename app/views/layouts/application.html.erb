@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- SEO -->
     <title><%= content_for(:title) || "Soadaa Blog" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Soadaa Blog">
-    <meta name="mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= yield :head %>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Soadaa's blog: Games, Guides, and whatever I want to talk about." %>">
+    <meta name="author" content="Soadaa">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<%= request.original_url %>">
+
+      <!-- Open Graph (Facebook, Discord, Slack previews) -->
+    <meta property="og:type" content="<%= content_for?(:og_type) ? yield(:og_type) : "website" %>">
+    <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : "Soadaa's Blog" %>">
+    <meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : "Soadaa's blog: Games, Guides, and whatever I want to talk about." %>">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta property="og:site_name" content="Soadaa's Blog">
+    <% if content_for?(:og_image) %>
+      <meta property="og:image" content="<%= yield(:og_image) %>">
+    <% end %>
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : "Soadaa's Blog" %>">
+    <meta name="twitter:description" content="<%= content_for?(:description) ? yield(:description) : "Soadaa's blog: Games, Guides, and whatever I want to talk about." %>">
+    <% if content_for?(:og_image) %>
+      <meta name="twitter:image" content="<%= yield(:og_image) %>">
+    <% end %>
     
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="hsl(210, 50%, 13%)">
+    
+    
+    <!-- RSS/Links -->
+    <link rel="me" href="https://www.youtube.com/@Soadaa5656">
+    <%= auto_discovery_link_tag :atom, feed_path, title: "Soadaa's Blog" %>
+
+    <!-- Favicon -->
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
+    <!-- Rails -->
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= yield :head %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
