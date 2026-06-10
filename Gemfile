@@ -67,7 +67,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "cssbundling-rails", "~> 1.4"
 
 # Custom Gems
 gem "rack-attack", "~> 6.8" # Block/throttling abusive requests [Bots]
