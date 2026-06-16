@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
+    require "commonmarker"
     @post = Post.last
-    require 'commonmarker'
     @markdown = Commonmarker.to_html(@post.body).html_safe
   end
 
