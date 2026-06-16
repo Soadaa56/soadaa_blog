@@ -28,7 +28,9 @@ class PostsController < ApplicationController
   # GET /posts/1 or /posts/1.json
   def show
     require "commonmarker"
-    @markdown = Commonmarker.to_html(@post.body).html_safe
+    @markdown = Commonmarker.to_html(@post.body, options:
+      { parse: { smart: true, relaxed_autolinks: true }
+      }).html_safe
   end
 
   # GET /posts/new
