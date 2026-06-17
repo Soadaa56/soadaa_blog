@@ -71,3 +71,4 @@ end
 # Custom Gems
 gem "rack-attack", "~> 6.8" # Block/throttling abusive requests [Bots]
 gem "commonmarker", "~> 2.8" # Markdown for posting
+gem "ruby-vips"

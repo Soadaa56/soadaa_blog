@@ -5,18 +5,18 @@ class Post < ApplicationRecord
     scope :published, -> { where("published_at <= ?", Time.current) }
     has_one_attached :cover_image do |attachable|
       attachable.variant :desktop,
-        resize_to_limit: [ 1920, 1920 ],
-        format: :webP
+        resize_to_limit: [ 1600, 1600 ],
+        format: :webp
 
       attachable.variant :tablet,
         resize_to_limit: [ 1280, 1280 ],
         format: :webp,
-        saver: 90
+        saver: { quality: 85 }
 
       attachable.variant :mobile,
         resize_to_limit: [ 480, 480 ],
         format: :webp,
-        saver: 80
+        saver: { quality: 75 }
     end
     has_many_attached :images
     validates :title, presence: true
