@@ -245,7 +245,7 @@ p {
 .post-popover {
     position: absolute;
     z-index: 200;
-    width: 65vw;
+    width: 63vw;
 }
 
 .theme-icon:hover {
@@ -324,7 +324,7 @@ p {
     }
 
     .post-popover {
-        width: 55vw;
+        width: 50vw;
     }
 }
 
@@ -359,7 +359,7 @@ p {
     }
 
     .post-popover {
-        width: 50vw;
+        width: 40vw;
     }
 }
 
