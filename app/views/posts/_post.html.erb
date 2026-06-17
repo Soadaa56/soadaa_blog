@@ -17,7 +17,7 @@
   </div>
 
   <% if post.cover_image.attached? %>
-    <picture class="">
+    <picture>
       <source srcset="<%= url_for(post.cover_image.variant(:mobile)) %>"
               media="(max-width: 768px)">
       <source srcset="<%= url_for(post.cover_image.variant(:tablet)) %>"

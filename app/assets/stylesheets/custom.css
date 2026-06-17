@@ -231,6 +231,9 @@ p {
     .home-latest-post-header {
         margin-bottom: 2.5rem;
     }
+    .post-cover-img {
+        margin-top: 1rem;
+    }
 }
 
 .post-show-back {

@@ -14,6 +14,15 @@
             <p class="capitalize">
                 <%= @post.category %> - <%= @post.created_at.to_fs(:long) %> - <%= link_to @post.title, @post %>
             </p>
+            <% if @post.cover_image.attached? %>
+                <picture>
+                    <source srcset="<%= url_for(@post.cover_image.variant(:mobile)) %>"
+                            media="(max-width: 768px)">
+                    <source srcset="<%= url_for(@post.cover_image.variant(:tablet)) %>"
+                            media="(max-width: 1024px)">
+                    <%= image_tag @post.cover_image.variant(:desktop), class: "post-cover-img" %>
+                </picture>
+            <% end %>
         </div>
     </section>
 </main>
