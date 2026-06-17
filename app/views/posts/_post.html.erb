@@ -17,7 +17,13 @@
   </div>
 
   <% if post.cover_image.attached? %>
-    <%= image_tag post.cover_image, class: "post-cover-img" %>  
+    <picture class="">
+      <source srcset="<%= url_for(post.cover_image.variant(:mobile)) %>"
+              media="(max-width: 768px)">
+      <source srcset="<%= url_for(post.cover_image.variant(:tablet)) %>"
+              media="(max-width: 1024px)">
+      <%= image_tag post.cover_image.variant(:desktop), class: "post-cover-img" %>
+    </picture>
   <% end %>
 
   <div class="prose">

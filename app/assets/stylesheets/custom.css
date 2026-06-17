@@ -323,10 +323,6 @@ p {
         padding-inline: 5rem;
     }
 
-    .post-cover-img {
-        max-width: 65vw;
-    }
-
     .post-popover {
         width: 50vw;
     }
@@ -360,10 +356,6 @@ p {
 
     .yield-content {
         padding-inline: 10rem;
-    }
-    
-    .post-cover-img {
-        max-width: 60vw;
     }
 
     .post-popover {
