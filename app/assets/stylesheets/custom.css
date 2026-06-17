@@ -245,6 +245,13 @@ p {
     outline: 2px solid var(--primary-color);
 }
 
+.post-form {
+    color: var(--text-color);
+    & > div {
+        margin: 1rem;
+    }
+}
+
 .post-popover {
     position: absolute;
     z-index: 200;
@@ -258,6 +265,18 @@ p {
     background: radial-gradient(var(--secondary-color), transparent);
     border-radius: 70%;
     opacity: 80%;
+}
+
+.updates-page {
+    > * {
+        /* margin: 1rem; */
+    }
+    section {
+        border: 1px solid var(--primary-color);
+        padding: 0.5rem;
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 
@@ -300,12 +319,6 @@ p {
     }
 }
 
-.post-form {
-    color: var(--text-color);
-    & > div {
-        margin: 1rem;
-    }
-}
 
 /* ===================
    ===================
@@ -397,7 +410,7 @@ p {
 }
 
 .small-text {
-    font-size: 0.82rem;
+    font-size: 0.85rem;
 }
 
 .hidden {
@@ -415,6 +428,10 @@ p {
 
 .prose > * + * {
     margin-block-start: var(--prose-flow, 1.5em);
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
 }
 
 .debug {
