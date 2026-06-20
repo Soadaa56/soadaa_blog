@@ -268,9 +268,6 @@ p {
 }
 
 .updates-page {
-    > * {
-        /* margin: 1rem; */
-    }
     section {
         border: 1px solid var(--primary-color);
         padding: 0.5rem;
