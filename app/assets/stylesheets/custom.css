@@ -253,6 +253,7 @@ p {
 }
 
 .post-popover {
+    margin-top: 1rem;
     position: absolute;
     z-index: 200;
     width: 65vw;
@@ -337,7 +338,7 @@ p {
     }
 
     .post-popover {
-        width: 40vw;
+        width: 45vw;
     }
 }
 
@@ -370,11 +371,6 @@ p {
     .yield-content {
         padding-inline: 10rem;
     }
-
-    .post-popover {
-        width: 50vw;
-    }
-
 }
 
 /* ===================
