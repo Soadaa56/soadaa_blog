@@ -38,9 +38,8 @@
     <%= auto_discovery_link_tag :atom, feed_path, title: "Soadaa's Blog" %>
 
     <!-- Favicon -->
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+    <%= favicon_link_tag 'favicon.ico' %>
+    <!-- <link rel="apple-touch-icon" href="/logo/soadaa-logo.png"> -->
 
     <!-- Rails -->
     <%= csrf_meta_tags %>
