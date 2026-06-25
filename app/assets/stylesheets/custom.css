@@ -120,21 +120,10 @@ p {
 #posts {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding-top: 2rem;
+    gap: 1.25rem;
+    padding-top: 1rem;
     > * {
-        background: var(--primary-color);
-        padding: 0.5em;
-        outline: 1px solid var(--secondary-color);
-        box-shadow: 0.6em 0.3em 1em 0.1em var(--primary-color);
-        /* This will block the IMG popover with the below CSS */
-        /* &:nth-child(odd) {
-            filter: brightness(0.9);
-            p {
-                filter: brightness(1.1);
-                filter: saturate(1.1);
-            }
-        } */
+        max-width: 1200px;
     }
 }
 
@@ -234,6 +223,18 @@ p {
     .post-cover-img {
         margin-top: 1rem;
     }
+}
+
+.post-index {
+    --toast-color: var(--primary-color);
+
+    color: hsl(from var(--toast-color) h s l);
+    background-color: hsl(from var(--toast-color) h s 35%);
+    box-shadow: 0 12px 12px -6px hsl(from var(--toast-color) h s l / 0.65);
+    border: 2px solid hsl(from var(--toast-color) h s 50%);
+
+    border-radius: 8px;
+    padding: 8px 16px;
 }
 
 .post-show-back {
@@ -378,6 +379,10 @@ p {
     Custom Classes
    =================== 
    =================== */
+.debug {
+    outline: 2px solid red;
+}
+
 .capitalize {
     text-transform: capitalize;
 }
@@ -425,8 +430,4 @@ p {
 
 .mb-1 {
     margin-bottom: 1rem;
-}
-
-.debug {
-    outline: 2px solid red;
 }

@@ -9,7 +9,7 @@
 <main id="posts">
   <% @posts.each do |post| %>
     <% cache post do %>
-      <div class="post-div" data-controller="popover">
+      <div class="post-index" data-controller="popover">
         <p class="capitalize">
           <%= time_tag post.created_at, post.created_at.strftime("%b %d, %Y") %>
           -
