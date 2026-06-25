@@ -67,7 +67,7 @@ body.colorblind {
     Element Selectors
    =================== */
 *:focus-visible {
-    outline: 3px solid hotpink;
+    outline: 3px solid var(--accent-color);
 }
 
 html {
@@ -197,7 +197,12 @@ ul {
         margin: 0.4rem 1rem;
         padding: 0.2rem;
         outline: 1px solid var(--primary-color);
-        box-shadow: 2px 0px 8px 0px;        
+        box-shadow: 2px 0px 8px 0px;
+
+        &:hover {
+            outline: 5px solid var(--primary-color);
+            color: var(--secondary-color);
+        }
     }
 
     .theme-popup-close {
