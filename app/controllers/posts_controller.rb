@@ -18,6 +18,10 @@ class PostsController < ApplicationController
   def index
       if params[:category].present?
        @posts = Post.where(category: params[:category]).published.order(created_at: :desc).includes([ :cover_image_attachment ])
+       if params[:subcategory].present?
+        @posts = @posts.where(subcategory: params[:subcategory]).published.order(created_at: :desc).includes([ :cover_image_attachment ])
+        @subcategory = params[:subcategory]
+       end
        @category = params[:category]
       else
        @posts = Post.published.order(created_at: :desc).includes([ :cover_image_attachment ])

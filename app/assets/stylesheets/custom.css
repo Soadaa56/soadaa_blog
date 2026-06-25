@@ -106,13 +106,16 @@ abbr {
   color: var(--secondary-color);
 }
 
-
 h1, h2, h3, h4, h5, h6  {
     color: var(--secondary-color);
 }
 
 p {
     color: var(--text-color);
+}
+
+ul {
+    padding-inline-start: 0;
 }
 /* ===================
         ID selectors
@@ -129,16 +132,15 @@ p {
 
 #nav-menu {
     max-width: 90vw;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
 
     .nav-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.75rem;
+        gap: 2rem;
         list-style-type: none;
         justify-content: center;
-        padding-inline-start: 0;
-        padding-inline-end: 1rem;
+        align-content: space-between;
         overflow: visible;
         li {
             min-width: 0;
@@ -258,6 +260,18 @@ p {
     position: absolute;
     z-index: 200;
     width: 65vw;
+}
+
+.subcategory-list {
+    text-decoration: none;
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    overflow: visible;
+
+    li a {
+        text-decoration: none;
+    }
 }
 
 .theme-icon:hover {
@@ -407,8 +421,16 @@ p {
     font-weight: 600;
 }
 
+.center {
+    text-align: center;
+}
+
 .small-text {
     font-size: 0.85rem;
+}
+
+.no-underline {
+    text-decoration: none;
 }
 
 .hidden {

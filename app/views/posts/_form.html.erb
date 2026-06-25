@@ -21,6 +21,11 @@
     <%= form.select :category, Post.categories.keys.map { |k| [k.humanize, k] } %>
   </div>
 
+   <div>
+    <%= form.label :subcategory, style: "display: block" %>
+    <%= form.select :subcategory, Post.subcategories.keys.map { |k| [k.humanize, k] }, :include_blank => true %>
+  </div>
+
   <div>
     <%= form.label :published_at, "Publish at", style: "display: block" %>
     <%= form.datetime_local_field :published_at %>

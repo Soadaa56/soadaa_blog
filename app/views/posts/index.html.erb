@@ -2,9 +2,31 @@
 
 <% content_for :title, "Soadaa's Blog - Posts" %>
 
-<h1 class="capitalize">
-  <%= @category.pluralize %>
-</h1>
+<% if @category == "games" %>
+  <h1 class="capitalize mb-1">
+    <%= @category.pluralize %>
+  </h1>
+  <% if @subcategory != nil %>
+    <h2 class="capitalize mb-1">
+      <%= @subcategory.pluralize %>
+    </h2>
+  <% else %>
+    <h2 class="mb-1">
+       All
+    </h2>
+  <% end %>
+  <ul class="subcategory-list capitalize mb-1">
+    <li><%= link_to "no filter", posts_path(category: "games") %></li>
+    <li><%= link_to "rankings", posts_path(category: "games", subcategory: "rankings") %></li>
+    <li><%= link_to "impressions", posts_path(category: "games", subcategory: "impressions") %></li>
+    <li><%= link_to "reviews", posts_path(category: "games", subcategory: "reviews") %></li>
+    <li><%= link_to "thoughts", posts_path(category: "games", subcategory: "thoughts") %></li>
+  </ul>
+<% else %>
+  <h1 class="capitalize">
+    <%= @category.pluralize %>
+  </h1>
+<% end %>
 
 <main id="posts">
   <% @posts.each do |post| %>
@@ -13,7 +35,7 @@
         <p class="capitalize">
           <%= time_tag post.created_at, post.created_at.strftime("%b %d, %Y") %>
           -
-          <%= link_to post.title, post, 
+          <%= link_to post.title, post, class: "no-underline", 
               data: { action: "mouseenter->popover#show mouseleave->popover#hide" } %>
           <% if post.cover_image.attached? %>
             <template data-popover-target="content">
@@ -27,7 +49,7 @@
     <% end %>
   <% end %>
 
-<% if @posts.first.nil? %>
-  <p>No posts of this category type yet!</p>
-<% end %>
 </main>
+<% if @posts.first.nil? %>
+  <p class="center">No posts of this category type yet!</p>
+<% end %>

@@ -1,8 +1,8 @@
 class Post < ApplicationRecord
     before_create :set_published_at, :generate_slug
 
-    enum :category, { blog: 0, game: 1, guide: 2, miscellaneous: 3 }
-    enum :subcategory, { impression: 0, review: 1, ranking: 2, thoughts: 3 }
+    enum :category, { blogs: 0, games: 1, guides: 2, misc: 3 }
+    enum :subcategory, { rankings: 0, impressions: 1, reviews: 2, thoughts: 3 }
     scope :published, -> { where("published_at <= ?", Time.current) }
     has_one_attached :cover_image do |attachable|
       attachable.variant :desktop,

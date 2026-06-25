@@ -7,8 +7,14 @@
 
   <div class="capitalize small-text">
     <div>
-      <%= post.category %> - <%= post.created_at.to_fs(:long) %>
+      <%= post.category %> - 
+      <time datetime="<%= post.created_at.to_formatted_s(:iso8601) %>"><%= post.created_at.to_fs(:long) %></time>
     </div>
+    <% if post.subcategory != nil %>
+      <div>
+        <%= post.subcategory %>
+      </div>
+    <% end %>
     <% if post.created_at != post.updated_at %>
       <div>
         Last updated: <%= post.updated_at.to_fs(:long) %>
