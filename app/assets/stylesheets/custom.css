@@ -131,7 +131,7 @@ ul {
 }
 
 #nav-menu {
-    max-width: 90vw;
+    outline: 2px solid red;
     padding: 2rem 2rem;
 
     .nav-list {
@@ -457,4 +457,11 @@ ul {
 
 .mb-1 {
     margin-bottom: 1rem;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
