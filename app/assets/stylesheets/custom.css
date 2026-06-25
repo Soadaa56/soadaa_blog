@@ -82,6 +82,18 @@ body {
 footer {
     position: sticky;
     background-color: var(--primary-color);
+    min-height: 15vh;
+    padding-block-start: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+    }
 }
 
 article {
@@ -298,32 +310,7 @@ ul {
 
 
 .footer-container {
-    display: flex;
-    flex-direction: column;
-
-    footer {
-        min-height: 15vh;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 16px;
-
-        .footer-links {
-            display: flex;
-            justify-content: space-between;
-
-            .footer-link-item {
-                margin-left: 0.5rem;
-                margin-right: 0.5rem;
-            }
-        }
-
-        .footer-image {
-            margin-top: 1rem;
-        }
-    }
+    
 }
 
 .yield-content {
