@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resource :session
+  resources :passwords, param: :token
   resources :posts
 
   get "feed", to: "posts#feed", defaults: { format: :atom }
