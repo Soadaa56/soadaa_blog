@@ -1,10 +1,7 @@
 class PostsController < ApplicationController
-  http_basic_authenticate_with(
-    name:     ENV.fetch("BLOG_ADMIN_USER", "admin"),
-    password: ENV.fetch("BLOG_ADMIN_PASS", "password"),
-    only:     %i[new create edit update destroy]
-  )
+  allow_unauthenticated_access
   before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :require_authentication, only: %i[ new create edit update destroy ]
 
   # Atom/RSS feed
   def feed
