@@ -1,4 +1,7 @@
 <main>
+    <% if authenticated? %>
+        <%= button_to "Log out", session_path, method: :delete %>
+      <% end %>
     <section>
         <h1 class="home-header">Soadaa's Blog</h1>
         <div class="home-intro">
