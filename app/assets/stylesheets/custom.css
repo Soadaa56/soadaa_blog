@@ -284,11 +284,12 @@ ul {
 }
 
 .subcategory-list {
-    text-decoration: none;
     display: flex;
+    justify-content: center;
     gap: 2rem;
     list-style-type: none;
     overflow: visible;
+    border-bottom: 16px solid var(--primary-color);
 
     li a {
         text-decoration: none;

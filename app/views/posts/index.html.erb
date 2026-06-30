@@ -2,6 +2,7 @@
 
 <% content_for :title, "Soadaa's Blog - Posts" %>
 
+<!-- Hardcoded for Games until other categories care about subcategories -->
 <% if @category == "games" %>
   <h1 class="capitalize mb-1">
     <%= @category.pluralize %>
@@ -51,5 +52,7 @@
 
 </main>
 <% if @posts.first.nil? %>
-  <p class="center">No posts of this category type yet!</p>
+  <div class="flex-center">
+    <p>No posts of this category type yet!</p>
+  </div>
 <% end %>
