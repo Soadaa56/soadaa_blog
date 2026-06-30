@@ -110,7 +110,7 @@ a, a:visited {
 a:hover {
     color: var(--secondary-color);
     filter: brightness(110%);
-    transition: color 400ms ease;
+    transition: color 300ms ease-out;
 }
 
 abbr {
@@ -166,6 +166,7 @@ ul {
         aspect-ratio: 1;
     }
 
+    /* Blur background when theme menu open */
     .menu-bg-overlay {
         position: fixed;
         top: 0;
