@@ -426,6 +426,10 @@ ul {
     font-size: 0.85rem;
 }
 
+.v-small-text {
+    font-size: 0.4rem;
+}
+
 .no-underline {
     text-decoration: none;
 }
