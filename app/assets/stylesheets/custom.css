@@ -129,6 +129,8 @@ p {
 ul {
     padding-inline-start: 0;
 }
+
+
 /* ===================
         ID selectors
    =================== */
@@ -178,6 +180,8 @@ ul {
         backdrop-filter: blur(0.3rem);
     }
 }
+
+
 /* ===================
     Class Selectors
    =================== */
@@ -307,16 +311,13 @@ ul {
 
 .updates-page {
     section {
-        border: 1px solid var(--primary-color);
-        padding: 0.5rem;
+        border: 2px solid var(--primary-color);
+        background-color: hsl(from var(--background-color) h s 15%);
+        padding: 1rem;
+        margin: 0.5rem 3rem;
         display: flex;
         gap: 1rem;
     }
-}
-
-
-.footer-container {
-    
 }
 
 .yield-content {
@@ -449,6 +450,10 @@ ul {
 
 .prose > * + * {
     margin-block-start: var(--prose-flow, 1.5em);
+}
+
+.p-1 {
+    padding: 1rem;
 }
 
 .mb-1 {
