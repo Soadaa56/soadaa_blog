@@ -2,10 +2,10 @@
 
 <% content_for :title, "Soadaa's Blog - Posts" %>
 
-<!-- Hardcoded for Games until other categories care about subcategories -->
+<!-- Hardcoded subcategory for Games (Category) until I need subcategories for others -->
 <% if @category == "games" %>
   <h1 class="capitalize mb-1">
-    <%= @category.pluralize %>
+    <%= @category.pluralize %> <span class="small-text">(<%= @post_count %>)</span>
   </h1>
   <% if @subcategory != nil %>
     <h2 class="capitalize mb-1">
@@ -24,8 +24,9 @@
     <li><%= link_to "thoughts", posts_path(category: "games", subcategory: "thoughts") %></li>
   </ul>
 <% else %>
+<!-- Otherwise, just show category -->
   <h1 class="capitalize">
-    <%= @category.pluralize %>
+    <%= @category.pluralize %> <span class="small-text">(<%= @post_count %>)</span>
   </h1>
 <% end %>
 
