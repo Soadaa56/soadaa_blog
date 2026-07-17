@@ -145,12 +145,12 @@ ul {
 }
 
 #nav-menu {
-    padding: 2rem 3rem;
+    padding: 2rem 4rem;
 
     .nav-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 1.8rem;
         list-style-type: none;
         justify-content: center;
         align-content: space-between;
