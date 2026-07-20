@@ -7,17 +7,18 @@ class Post < ApplicationRecord
     has_one_attached :cover_image do |attachable|
       attachable.variant :desktop,
         resize_to_limit: [ 1600, 1600 ],
-        format: :webp
+        format: :webp,
+        saver: { quality: 90 }
 
       attachable.variant :tablet,
         resize_to_limit: [ 1280, 1280 ],
         format: :webp,
-        saver: { quality: 85 }
+        saver: { quality: 80 }
 
       attachable.variant :mobile,
         resize_to_limit: [ 480, 480 ],
         format: :webp,
-        saver: { quality: 75 }
+        saver: { quality: 70 }
     end
     has_many_attached :images
     validates :title, presence: true
